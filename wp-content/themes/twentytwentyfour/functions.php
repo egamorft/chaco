@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Twenty Twenty-Four functions and definitions
  *
@@ -12,20 +13,21 @@
  * Register block styles.
  */
 
-if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
+if (!function_exists('twentytwentyfour_block_styles')) :
 	/**
 	 * Register custom block styles
 	 *
 	 * @since Twenty Twenty-Four 1.0
 	 * @return void
 	 */
-	function twentytwentyfour_block_styles() {
+	function twentytwentyfour_block_styles()
+	{
 
 		register_block_style(
 			'core/details',
 			array(
 				'name'         => 'arrow-icon-details',
-				'label'        => __( 'Arrow icon', 'twentytwentyfour' ),
+				'label'        => __('Arrow icon', 'twentytwentyfour'),
 				/*
 				 * Styles for the custom Arrow icon style of the Details block
 				 */
@@ -48,7 +50,7 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			'core/post-terms',
 			array(
 				'name'         => 'pill',
-				'label'        => __( 'Pill', 'twentytwentyfour' ),
+				'label'        => __('Pill', 'twentytwentyfour'),
 				/*
 				 * Styles variation for post terms
 				 * https://github.com/WordPress/gutenberg/issues/24956
@@ -71,7 +73,7 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			'core/list',
 			array(
 				'name'         => 'checkmark-list',
-				'label'        => __( 'Checkmark', 'twentytwentyfour' ),
+				'label'        => __('Checkmark', 'twentytwentyfour'),
 				/*
 				 * Styles for the custom checkmark list block style
 				 * https://github.com/WordPress/gutenberg/issues/51480
@@ -90,7 +92,7 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			'core/navigation-link',
 			array(
 				'name'         => 'arrow-link',
-				'label'        => __( 'With arrow', 'twentytwentyfour' ),
+				'label'        => __('With arrow', 'twentytwentyfour'),
 				/*
 				 * Styles for the custom arrow nav link block style
 				 */
@@ -108,7 +110,7 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 			'core/heading',
 			array(
 				'name'         => 'asterisk',
-				'label'        => __( 'With asterisk', 'twentytwentyfour' ),
+				'label'        => __('With asterisk', 'twentytwentyfour'),
 				'inline_style' => "
 				.is-style-asterisk:before {
 					content: '';
@@ -144,20 +146,21 @@ if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 	}
 endif;
 
-add_action( 'init', 'twentytwentyfour_block_styles' );
+add_action('init', 'twentytwentyfour_block_styles');
 
 /**
  * Enqueue block stylesheets.
  */
 
-if ( ! function_exists( 'twentytwentyfour_block_stylesheets' ) ) :
+if (!function_exists('twentytwentyfour_block_stylesheets')) :
 	/**
 	 * Enqueue custom block stylesheets
 	 *
 	 * @since Twenty Twenty-Four 1.0
 	 * @return void
 	 */
-	function twentytwentyfour_block_stylesheets() {
+	function twentytwentyfour_block_stylesheets()
+	{
 		/**
 		 * The wp_enqueue_block_style() function allows us to enqueue a stylesheet
 		 * for a specific block. These will only get loaded when the block is rendered
@@ -170,37 +173,177 @@ if ( ! function_exists( 'twentytwentyfour_block_stylesheets' ) ) :
 			'core/button',
 			array(
 				'handle' => 'twentytwentyfour-button-style-outline',
-				'src'    => get_parent_theme_file_uri( 'assets/css/button-outline.css' ),
-				'ver'    => wp_get_theme( get_template() )->get( 'Version' ),
-				'path'   => get_parent_theme_file_path( 'assets/css/button-outline.css' ),
+				'src'    => get_parent_theme_file_uri('assets/css/button-outline.css'),
+				'ver'    => wp_get_theme(get_template())->get('Version'),
+				'path'   => get_parent_theme_file_path('assets/css/button-outline.css'),
 			)
 		);
 	}
 endif;
 
-add_action( 'init', 'twentytwentyfour_block_stylesheets' );
+add_action('init', 'twentytwentyfour_block_stylesheets');
 
 /**
  * Register pattern categories.
  */
 
-if ( ! function_exists( 'twentytwentyfour_pattern_categories' ) ) :
+if (!function_exists('twentytwentyfour_pattern_categories')) :
 	/**
 	 * Register pattern categories
 	 *
 	 * @since Twenty Twenty-Four 1.0
 	 * @return void
 	 */
-	function twentytwentyfour_pattern_categories() {
+	function twentytwentyfour_pattern_categories()
+	{
 
 		register_block_pattern_category(
 			'page',
 			array(
-				'label'       => _x( 'Pages', 'Block pattern category', 'twentytwentyfour' ),
-				'description' => __( 'A collection of full page layouts.', 'twentytwentyfour' ),
+				'label'       => _x('Pages', 'Block pattern category', 'twentytwentyfour'),
+				'description' => __('A collection of full page layouts.', 'twentytwentyfour'),
 			)
 		);
 	}
 endif;
 
-add_action( 'init', 'twentytwentyfour_pattern_categories' );
+add_action('init', 'twentytwentyfour_pattern_categories');
+
+if (!function_exists('create_home_pages_type')) :
+	function create_home_pages_type()
+	{
+		$labels = array(
+			'name' => 'Home Pages',
+			'singular_name' => 'Home Page',
+		);
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'has_archive' => false,
+		);
+		register_post_type('home_pages', $args);
+	}
+endif;
+add_action('init', 'create_home_pages_type');
+
+// Remove the Add New submenu page for Home Pages
+function remove_home_pages_submenu()
+{
+    remove_submenu_page('edit.php?post_type=home_pages', 'edit.php?post_type=home_pages');
+	remove_submenu_page('edit.php?post_type=home_pages', 'post-new.php?post_type=home_pages');
+}
+add_action('admin_menu', 'remove_home_pages_submenu');
+
+if (!function_exists('create_slider_post_type')) :
+	function create_slider_post_type()
+	{
+		$labels = array(
+			'name' => 'Sliders',
+			'singular_name' => 'Slider',
+		);
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'has_archive' => false,
+			'supports' => array('title'),
+			'show_in_menu' => 'edit.php?post_type=home_pages', // Set the parent menu
+		);
+		register_post_type('slider', $args);
+	}
+endif;
+add_action('init', 'create_slider_post_type');
+
+if (!function_exists('create_shop_by_style_type')) :
+	function create_shop_by_style_type()
+	{
+		$labels = array(
+			'name' => 'Shop By Style',
+			'singular_name' => 'Shop By Style',
+		);
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'has_archive' => false,
+			'supports' => array('title'),
+			'show_in_menu' => 'edit.php?post_type=home_pages', // Set the parent menu
+		);
+		register_post_type('shop_by_style', $args);
+	}
+endif;
+add_action('init', 'create_shop_by_style_type');
+
+if (!function_exists('create_home_card_type')) :
+	function create_home_card_type()
+	{
+		$labels = array(
+			'name' => 'Home Cards',
+			'singular_name' => 'Home Cards',
+		);
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'has_archive' => false,
+			'supports' => array('title'),
+			'show_in_menu' => 'edit.php?post_type=home_pages', // Set the parent menu
+		);
+		register_post_type('home_card', $args);
+	}
+endif;
+add_action('init', 'create_home_card_type');
+
+if (!function_exists('create_favorite_type')) :
+	function create_favorite_type()
+	{
+		$labels = array(
+			'name' => 'Favorites',
+			'singular_name' => 'Favorites',
+		);
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'has_archive' => false,
+			'supports' => array('title'),
+			'show_in_menu' => 'edit.php?post_type=home_pages', // Set the parent menu
+		);
+		register_post_type('favorites', $args);
+	}
+endif;
+add_action('init', 'create_favorite_type');
+
+if (!function_exists('create_customs_type')) :
+	function create_customs_type()
+	{
+		$labels = array(
+			'name' => 'Customs',
+			'singular_name' => 'Customs',
+		);
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'has_archive' => false,
+			'supports' => array('title'),
+			'show_in_menu' => 'edit.php?post_type=home_pages', // Set the parent menu
+		);
+		register_post_type('custom', $args);
+	}
+endif;
+add_action('init', 'create_customs_type');
+
+if (!function_exists('create_social_type')) :
+	function create_social_type()
+	{
+		$labels = array(
+			'name' => 'Social',
+			'singular_name' => 'Social',
+		);
+		$args = array(
+			'labels' => $labels,
+			'public' => true,
+			'has_archive' => false,
+			'supports' => array('title'),
+			'show_in_menu' => 'edit.php?post_type=home_pages', // Set the parent menu
+		);
+		register_post_type('social', $args);
+	}
+endif;
+add_action('init', 'create_social_type');
