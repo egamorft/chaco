@@ -52,7 +52,14 @@
 </div>
 
 <div class="box-header-mobile">
-   
+   <img src="" alt="">
+   <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/search-sm.png" class="icon-search-header-mobile">
+   <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/logo.png" class="img-logo">
+   <div class="position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSale" aria-controls="offcanvasRight">
+               <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/Icon.png" class="icon-header">
+               <div class="circle">1</div>
+            </div>
+            <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/shopping-cart.png" class="icon-cart">
 </div>
 
 <!-- model sale -->
