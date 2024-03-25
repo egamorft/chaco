@@ -112,7 +112,7 @@ var swiper = new Swiper(".bannerSwiper", {
   },
 });
 var swiper = new Swiper(".productSwiper", {
-  slidesPerView: 5.5,
+  slidesPerView: "auto",
   spaceBetween: 30,
   freeMode: true,
   navigation: {
@@ -122,8 +122,51 @@ var swiper = new Swiper(".productSwiper", {
   pagination: {
     el: ".swiper-pagination",
   },
+  breakpoints: {
+    768: {
+      slidesPerView: 5.5,
+    },
+    300: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
+  },
 });
 var swiper = new Swiper(".favoritesSwiper", {
-  slidesPerView: 2.7,
   spaceBetween: 30,
+  breakpoints: {
+    768: {
+      slidesPerView: 2.7,
+      navigation: false,
+    },
+    300: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    },
+  },
 });
+var swiper = new Swiper(".photo-library", {
+  slidesPerView: 9,
+  grid: {
+    rows: 3,
+  },
+  autoplay: {
+    delay: 3000,
+  },
+});
+// var slides = document.querySelectorAll(".swiper-slide");
+
+// slides.forEach(function (slide, index) {
+//   // Xác định số lượng cột mỗi hàng
+//   var columnsPerRow = Math.ceil(slides.length / swiper.params.grid.rows);
+
+//   // Xác định hàng của slide
+//   var row = Math.floor(index / columnsPerRow) + 1;
+
+//   // Thêm lớp CSS cho slide tương ứng
+//   slide.classList.add("row-" + row);
+// });
