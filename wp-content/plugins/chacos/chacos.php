@@ -45,7 +45,7 @@ function fw_reserve_page_template_shop( $page_template )
     $page_home = get_option('home-shop');
     if (  is_page( $page_home ) ) {
 
-        $page_template = dirname( __FILE__ ) . '/view/index.php';
+        $page_template = dirname( __FILE__ ) . '/view/home.php';
     }
 
     // $page_about = get_option('about');

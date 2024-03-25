@@ -151,22 +151,19 @@ var swiper = new Swiper(".favoritesSwiper", {
 });
 var swiper = new Swiper(".photo-library", {
   slidesPerView: 9,
-  grid: {
-    rows: 3,
-  },
+  spaceBetween: 10,
   autoplay: {
-    delay: 3000,
+    delay: 5200,
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 9,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    300: {
+      slidesPerView: 2,
+    },
   },
 });
-// var slides = document.querySelectorAll(".swiper-slide");
-
-// slides.forEach(function (slide, index) {
-//   // Xác định số lượng cột mỗi hàng
-//   var columnsPerRow = Math.ceil(slides.length / swiper.params.grid.rows);
-
-//   // Xác định hàng của slide
-//   var row = Math.floor(index / columnsPerRow) + 1;
-
-//   // Thêm lớp CSS cho slide tương ứng
-//   slide.classList.add("row-" + row);
-// });
