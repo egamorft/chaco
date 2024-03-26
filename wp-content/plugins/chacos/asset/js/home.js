@@ -153,7 +153,7 @@ var swiper = new Swiper(".photo-library", {
   slidesPerView: 9,
   spaceBetween: 10,
   autoplay: {
-    delay: 5200,
+    delay: 3000,
   },
   breakpoints: {
     992: {
