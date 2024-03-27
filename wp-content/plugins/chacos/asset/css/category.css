@@ -37,6 +37,11 @@
   background-color: white;
   padding: 20px;
   position: relative;
+  cursor: pointer;
+}
+.active-filter {
+  background-color: #004c59 !important;
+  color: white !important;
 }
 .tag-hot {
   position: absolute;
@@ -116,6 +121,8 @@
 .content-filter {
   position: sticky;
   top: 145px;
+  max-height: 660px;
+  overflow-y: auto;
 }
 .select-wrapper {
   position: relative;
@@ -246,7 +253,7 @@
 }
 .accordion-button-filter:not(.collapsed)::after,
 .accordion-button-filter::after {
-  background-image: url("../img/chevron.svg");
+  background-image: url("../img/chevron.svg") !important;
 }
 .box-sp {
   width: 83%;
@@ -257,6 +264,38 @@
 }
 .item-sp-filter {
   width: 100%;
+  position: relative;
+}
+.item-sp-filter:hover .line-add-cart {
+  display: inline-block;
+}
+.slide-col-item-category:hover .line-add-cart-slide {
+  display: inline-block;
+}
+.line-add-cart-slide {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  cursor: pointer;
+  display: none;
+}
+.line-add-cart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  cursor: pointer;
+  display: none;
+}
+.title-quick {
+  color: #004c59;
+  font-weight: 500;
+  font-size: 14px;
+}
+.title-quick:hover {
+  color: #76ccdc;
+  font-weight: bold;
 }
 .icon-heart {
   position: absolute;
@@ -316,6 +355,11 @@
 }
 .box-line-filter-mobie {
   display: none;
+}
+.close-offcavans-filter-mobile {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 @media (max-width: 1570px) {
   .box-sp,
@@ -387,6 +431,9 @@
     padding: 15px 30px;
     font-size: 13px;
   }
+  .body-item-filter {
+    padding: 10px;
+  }
 }
 @media (max-width: 767px) {
   .line-header-menu-page {
@@ -447,5 +494,11 @@
     align-items: center;
     padding-left: 20px;
     padding-right: 5px;
+  }
+  .name-filter {
+    background-color: white;
+  }
+  .accordion-button-filter {
+    background-color: white;
   }
 }

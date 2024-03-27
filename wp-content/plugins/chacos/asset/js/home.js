@@ -123,8 +123,11 @@ var swiper = new Swiper(".productSwiper", {
     el: ".swiper-pagination",
   },
   breakpoints: {
-    768: {
+    992: {
       slidesPerView: 5.5,
+    },
+    768: {
+      slidesPerView: 4,
     },
     300: {
       slidesPerView: 1.5,
