@@ -644,10 +644,10 @@
     font-size: 30px;
   }
   .img-product-style {
-    max-height: 129px;
+    max-height: 211px;
   }
   .productSwiper {
-    height: 180px !important;
+    height: 260px !important;
   }
   .title-product-top {
     font-size: 10px;
@@ -655,7 +655,7 @@
   }
   .title-product-bottom {
     font-size: 12px;
-    bottom: 50px;
+    bottom: 55px;
   }
   .swiper-pagination-product .swiper-pagination-bullet {
     width: 10px !important;
