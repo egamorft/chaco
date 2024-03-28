@@ -1,7 +1,7 @@
 <div class="box-header">
    <div class="header-top">
       <div class="box-big-header-top">
-         <span class="title-header-top title-header-left">Easy & Free Returns</span>
+         <a href="<?php echo home_url('/return') ?>" class="title-header-top title-header-left">Easy & Free Returns</a>
          <div class="box-item-header-top">
             <div class="dropdown">
                <span class="title-header-top" data-bs-toggle="dropdown" aria-expanded="false">Help</span>
@@ -15,7 +15,7 @@
                   <li><a class="dropdown-item-help dropdown-item" href="#"><img
                            src="https://www.chacos.com/on/demandware.static/Sites-chacos_us-Site/-/default/dwdda501f6/images/Icon-service-new.png"
                            class="mr-2"><span style="padding-left: 5px;">CUSTOMER SERVICE</span></a></li>
-                  <li><a class="dropdown-item-help dropdown-item" href="#"><img
+                  <li><a class="dropdown-item-help dropdown-item" href="<?php echo home_url('/return') ?>"><img
                            src="https://www.chacos.com/on/demandware.static/Sites-chacos_us-Site/-/default/dw5cc964b9/images/Icon-return-new.png"
                            class="mr-2"><span style="padding-left: 5px;">EXCHANGE & RETURN</span></a></li>
                   <li><a class="dropdown-item-help dropdown-item" href="#"><img
