@@ -31,9 +31,30 @@ function add_my_custom_page_shop()
         'post_name' => 'category',
     );
 
-    // Insert the post into the database
     $add_category = wp_insert_post($my_category);
     update_option('category', $add_category);
+
+    $my_return = array(
+        'post_title'    => wp_strip_all_tags('Return'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'return',
+    );
+
+    $add_return = wp_insert_post($my_return);
+    update_option('return', $add_return);
+
+    $my_detail_product = array(
+        'post_title'    => wp_strip_all_tags('Detail-product'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'detail-product',
+    );
+
+    $add_detail_product = wp_insert_post($my_detail_product);
+    update_option('detail-product', $add_detail_product);
 }
 
 register_activation_hook(__FILE__, 'add_my_custom_page_shop');
@@ -54,6 +75,18 @@ function fw_reserve_page_template_shop( $page_template )
         $page_template = dirname( __FILE__ ) . '/view/category.php';
     }
 
+    $page_return = get_option('return');
+    if (  is_page( $page_return ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/return.php';
+    }
+
+    $page_detail_product = get_option('detail-product');
+    if (  is_page( $page_detail_product ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/detail-product.php';
+    }
+
     return $page_template;
 }
 
@@ -64,5 +97,9 @@ function deactivate_plugin_pythaverse_shop()
     wp_delete_post($page_home);
     $page_category = get_option('category');
     wp_delete_post($page_category);
+    $page_detail_product = get_option('detail-product');
+    wp_delete_post($page_detail_product);
+    $page_return = get_option('return');
+    wp_delete_post($page_return);
 }
 register_deactivation_hook(__FILE__, 'deactivate_plugin_pythaverse_shop');
