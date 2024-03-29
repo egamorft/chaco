@@ -40,10 +40,10 @@ function hoverEffect() {
 
   elements.forEach((element, index) => {
     var timing = {
-      duration: 8000, // The duration for one cycle of the animation, in milliseconds
-      iterations: Infinity, // The number of times the animation should repeat
-      delay: index * 1000, // Add a delay based on the element's index
-      easing: "linear", // Use a linear easing function for smoother animation
+      duration: 8000,
+      iterations: Infinity,
+      delay: index * 1000,
+      easing: "linear",
     };
 
     element.style.willChange = "transform";
@@ -54,7 +54,7 @@ function hoverEffect() {
 }
 
 function parallax(event) {
-  if (prefersReducedMotion || isMobile) return; // Don't run if prefers-reduced-motion is on or on mobile
+  if (prefersReducedMotion || isMobile) return;
 
   const homeCardsSection = document.getElementById("home-cards");
   const shifts = homeCardsSection.querySelectorAll(".parallax-wrap .lax");
@@ -65,26 +65,21 @@ function parallax(event) {
     shifts.forEach((shift) => {
       const position = shift.getAttribute("value");
 
-      // Calculate x and y relative to the #home-cards section
-      const x = ((event.clientX - window.innerWidth / 2) * position) / 90; // Adjusted calculation
-      const y = ((event.clientY - window.innerHeight / 2) * position) / 60; // Adjusted calculation
+      const x = ((event.clientX - window.innerWidth / 2) * position) / 90;
+      const y = ((event.clientY - window.innerHeight / 2) * position) / 60;
 
       shift.style.transform = `translateX(${x}px) translateY(${y}px) `;
     });
   }
 }
 document.addEventListener("mousemove", function (event) {
-  // Call parallax function always
   parallax(event);
-
-  // Check if hover effect is active
   if (hoverEffectActive) {
     hoverEffect();
   }
 });
 
 window.onload = function () {
-  // Set up listeners to control hover effect activation/deactivation
   const homeCards = document.getElementById("home-cards");
 
   homeCards.addEventListener("mouseenter", function () {
@@ -97,7 +92,6 @@ window.onload = function () {
     hoverEffectActive = false;
   });
 
-  // Start hover effect initially
   if (!prefersReducedMotion && !isMobile) {
     hoverEffect();
   }
@@ -152,12 +146,51 @@ var swiper = new Swiper(".favoritesSwiper", {
     },
   },
 });
-var swiper = new Swiper(".photo-library", {
+var swiper = new Swiper(".photo-library1", {
+  slidesPerView: 9,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 2000,
+  },
+  speed: 2000,
+  breakpoints: {
+    992: {
+      slidesPerView: 9,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    300: {
+      slidesPerView: 2,
+    },
+  },
+});
+var swiper = new Swiper(".photo-library2", {
+  slidesPerView: 9,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 2500,
+  },
+  speed: 2000,
+  breakpoints: {
+    992: {
+      slidesPerView: 9,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    300: {
+      slidesPerView: 2,
+    },
+  },
+});
+var swiper = new Swiper(".photo-library3", {
   slidesPerView: 9,
   spaceBetween: 10,
   autoplay: {
     delay: 3000,
   },
+  speed: 2000,
   breakpoints: {
     992: {
       slidesPerView: 9,

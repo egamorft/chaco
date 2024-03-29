@@ -14,61 +14,6 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
    <link rel="stylesheet" href="<?= WIDGET_URL_CHACOS ?>/asset/css/home.css">
    <link rel="stylesheet" href="<?= WIDGET_URL_CHACOS ?>/asset/css/style.css">
-   <style>
-   .row-1 {
-      animation: wave-row-1 3.4s ease-in-out infinite alternate;
-   }
-
-   .row-2 {
-      animation: wave-row-2 3.5s ease-in-out infinite alternate;
-   }
-
-   .row-3 {
-      animation: wave-row-3 3.6s ease-in-out infinite alternate;
-   }
-
-   @keyframes wave-row-1 {
-      0% {
-         transform: translateX(0);
-      }
-
-      50% {
-         transform: translateX(50px);
-      }
-
-      100% {
-         transform: translateX(0);
-      }
-   }
-
-   @keyframes wave-row-2 {
-      0% {
-         transform: translateX(0);
-      }
-
-      50% {
-         transform: translateX(55px);
-      }
-
-      100% {
-         transform: translateX(0);
-      }
-   }
-
-   @keyframes wave-row-3 {
-      0% {
-         transform: translateX(0);
-      }
-
-      50% {
-         transform: translateX(60px);
-      }
-
-      100% {
-         transform: translateX(0);
-      }
-   }
-   </style>
 </head>
 
 <body>
@@ -403,122 +348,122 @@
          <p class="title-small-around">Join the #ChacoNation on Instagram</p>
       </div>
 
-      <div class="swiper photo-library">
+      <div class="swiper photo-library1 mb-2">
          <div class="swiper-wrapper">
-            <div class="swiper-slide row-1"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-1"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-1"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-1"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-1"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-1"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-1"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-1"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-1"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-1"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-1"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-1"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
          </div>
       </div>
-      <div class="swiper photo-library">
+      <div class="swiper photo-library2 mb-2">
          <div class="swiper-wrapper">
-            <div class="swiper-slide row-2"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-2"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-2"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-2"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-2"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-2"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-2"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-2"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-2"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-2"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-2"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-2"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
          </div>
       </div>
-      <div class="swiper photo-library">
+      <div class="swiper photo-library3 mb-2">
          <div class="swiper-wrapper">
-            <div class="swiper-slide row-3"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-3"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-3"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-3"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-3"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-3"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-3"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-3"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-3"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-3"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-3"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
-            <div class="swiper-slide row-3"><img
+            <div class="swiper-slide"><img
                   src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
                   class="w-100"></div>
          </div>

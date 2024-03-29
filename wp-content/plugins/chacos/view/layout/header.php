@@ -54,11 +54,9 @@
                   </div>
                </div>
                <div class="item-menu-header-col">
-                  <p class="title-big-menu-item">MEN</p>
                   <div class="d-flex flex-column">
-                     <a href="<?php echo home_url('/category') ?>" class="name-small-item-menu">1 Strap</a>
-                     <a href="<?php echo home_url('/category') ?>" class="name-small-item-menu">1 Strap</a>
-                     <a href="<?php echo home_url('/category') ?>" class="name-small-item-menu">1 Strap</a>
+                     <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/nav-header.png" class="w-75">
+                     <a href="" class="item-link-mav-header">Shop Collab</a>
                   </div>
                </div>
             </div>
@@ -157,7 +155,9 @@
 <!-- model sale -->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasSale" aria-labelledby="offcanvasSaleLabel">
    <div class="offcanvas-body">
-      <div class="box-sale-style">
+      <button type="button" class="btn-close" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSale"
+         aria-controls="offcanvasSale" aria-label="Close"></button>
+      <div class="box-sale-style mt-0">
          <div class="item-sale-style">
             <img
                src="https://www.chacos.com/on/demandware.static/-/Sites-chacos_us-Library/default/dwc07ae136/content/seasonal-content/promos/2021/09/extole_updates_promotab_03.jpg"
