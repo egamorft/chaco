@@ -108,7 +108,7 @@ var swiper = new Swiper(".bannerSwiper", {
     el: ".swiper-pagination",
   },
   autoplay: {
-    delay: 3000,
+    delay: 5000,
   },
 });
 var swiper = new Swiper(".productSwiper", {

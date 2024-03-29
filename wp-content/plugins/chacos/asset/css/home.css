@@ -239,7 +239,7 @@
   padding: 20px 0;
 }
 .title-banner-three {
-  color: #000000;
+  color: #004c59;
   font-weight: 400;
   font-size: 16px;
   margin-bottom: 20px;
@@ -253,6 +253,10 @@
   font-size: 15px;
   font-weight: 700;
   text-decoration: none;
+}
+.btn-link-banner:hover {
+  background-color: white;
+  color: #1d4b58;
 }
 .swiper-pagination-banner {
   width: 20% !important;
@@ -367,19 +371,21 @@
   padding-left: 20px;
 }
 .title-chacoNation {
-  font-size: 27px;
+  font-size: 32px;
   font-weight: 700;
   color: #1d4b58;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
+  transform: rotate(-90deg);
+  width: 50px;
+  margin-top: 230px;
+  margin-right: 20px;
 }
 .title-favorites {
   color: #e45c37;
-  font-size: 60px;
+  font-size: 70px;
   font-weight: 700;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  padding-right: 20px;
+  transform: rotate(-90deg);
+  width: 50px;
+  margin-top: 300px;
 }
 .name-product-favo {
   font-size: 14px;
@@ -484,6 +490,9 @@
 .video-mobile {
   display: none;
 }
+.favoritesSwiper {
+  margin-left: 40px;
+}
 .favoritesSwiper .swiper-button-prev,
 .favoritesSwiper .swiper-button-next {
   display: none;
@@ -519,6 +528,12 @@
   }
   .img-product-style {
     max-height: 313px;
+  }
+  .title-chacoNation {
+    margin-top: 200px;
+  }
+  .title-favorites {
+    margin-top: 250px;
   }
 }
 @media (max-width: 1450px) {
@@ -563,6 +578,13 @@
   }
   .productSwiper {
     height: 300px !important;
+  }
+  .title-chacoNation {
+    margin-top: 165px;
+    margin-right: 10px;
+  }
+  .title-favorites {
+    margin-top: 200px;
   }
 }
 @media (max-width: 1040px) {
@@ -628,6 +650,14 @@
   .price-product-favo {
     font-size: 12px;
   }
+  .title-chacoNation {
+    margin-top: 130px;
+    margin-right: 0px;
+    font-size: 24px;
+  }
+  .title-favorites {
+    margin-top: 150px;
+  }
 }
 @media (max-width: 992px) {
   .box-contnt-banner {
@@ -673,7 +703,7 @@
     font-size: 24px;
   }
   .box-right-favo {
-    padding-left: 15px;
+    padding-left: 0px;
   }
   .title-favorites {
     padding-right: 15px;
@@ -702,6 +732,18 @@
   }
   .content-describe-footer {
     font-size: 14px;
+  }
+  .title-chacoNation {
+    margin-top: 115px;
+    margin-right: 0px;
+    font-size: 20px;
+  }
+  .title-favorites {
+    margin-top: 130px;
+    font-size: 35px;
+  }
+  .favoritesSwiper {
+    margin-left: 10px;
   }
 }
 @media (min-width: 641px) {
@@ -834,7 +876,7 @@
     left: 50%;
     transform: translateX(-50%);
     top: unset;
-    bottom: 15%;
+    bottom: 12%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -845,7 +887,7 @@
     bottom: 45px !important;
   }
   .title-banner-one {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
   .productSwiper .swiper-pagination-product {
     width: 60%;
@@ -896,19 +938,20 @@
   .title-chacoNation {
     width: 100%;
     text-align: center;
-    writing-mode: unset;
+    transform: unset;
   }
   .title-favorites {
     width: 100%;
     text-align: center;
-    writing-mode: unset;
+    transform: unset;
     padding-right: 0px;
-    font-size: 30px;
+    font-size: 36px;
+    margin-top: 0;
   }
   .title-chacoNation {
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
   #home-cards .ag-site-width .parallax-wrap .card-wrap-left .card-1 .img-main {
     width: 64em;
@@ -961,6 +1004,10 @@
   }
   .box-banner {
     margin-top: 51px;
+  }
+  .title-banner-two,
+  .title-banner-three {
+    text-align: center;
   }
 }
 @media (max-width: 640px) {
