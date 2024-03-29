@@ -78,7 +78,7 @@
       <div class="swiper-wrapper">
          <div class="swiper-slide box-item-banner">
             <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/banner.png" class="w-100 img-banner-home">
-            <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/slide.jpg" class="w-100 img-banner-home-mobile">
+            <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/slide1.png" class="w-100 img-banner-home-mobile">
             <div class="box-contnt-banner">
                <div class="title-banner-one">LATEST DROP</div>
                <div class="title-banner-two"><span style="color: #1D4B58;">THE RETRO</span> <span
@@ -88,13 +88,14 @@
             </div>
          </div>
          <div class="swiper-slide box-item-banner">
-            <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/banner.png" class="w-100 img-banner-home">
+            <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/banner2.png" class="w-100 img-banner-home">
             <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/slide.jpg" class="w-100 img-banner-home-mobile">
             <div class="box-contnt-banner">
                <div class="title-banner-one">LATEST DROP</div>
-               <div class="title-banner-two"><span style="color: #1D4B58;">THE RETRO</span> <span
-                     style="color: #B85B53;">COLLECTION</span></div>
-               <div class="title-banner-three">Rewind and refresh your style with the Retro Collection.</div>
+               <div class="title-banner-two"><span style="color: #1D4B58;">SPRING
+                     BRIGHTS</span> <span style="color: #B85B53;">COLLECTION</span></div>
+               <div class="title-banner-three">Fresh designs and new colors help you
+                  kickoff the season in style.</div>
                <a href="#" class="btn-link-banner">SHOP RETRO COLLECTION</a>
             </div>
          </div>
@@ -107,37 +108,30 @@
       <div class="swiper productSwiper">
          <div class="swiper-wrapper">
             <div class="swiper-slide box-item-product">
-               <div class="title-product-top">Leather</div>
                <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/z-sandals.png" class="img-product-style">
                <div class="title-product-bottom">Leather</div>
             </div>
             <div class="swiper-slide box-item-product">
-               <div class="title-product-top">Leather</div>
                <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/z-sandals.png" class="img-product-style">
                <div class="title-product-bottom">Leather</div>
             </div>
             <div class="swiper-slide box-item-product">
-               <div class="title-product-top">Leather</div>
                <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/z-sandals.png" class="img-product-style">
                <div class="title-product-bottom">Leather</div>
             </div>
             <div class="swiper-slide box-item-product">
-               <div class="title-product-top">Leather</div>
                <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/z-sandals.png" class="img-product-style">
                <div class="title-product-bottom">Leather</div>
             </div>
             <div class="swiper-slide box-item-product">
-               <div class="title-product-top">Leather</div>
                <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/z-sandals.png" class="img-product-style">
                <div class="title-product-bottom">Leather</div>
             </div>
             <div class="swiper-slide box-item-product">
-               <div class="title-product-top">Leather</div>
                <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/z-sandals.png" class="img-product-style">
                <div class="title-product-bottom">Leather</div>
             </div>
             <div class="swiper-slide box-item-product">
-               <div class="title-product-top">Leather</div>
                <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/z-sandals.png" class="img-product-style">
                <div class="title-product-bottom">Leather</div>
             </div>
@@ -328,8 +322,14 @@
 
    <div class="box-favorites">
       <div class="box-left-favo-img">
-         <img src="https://kenh14cdn.com/thumb_w/620/203336854389633024/2024/3/22/photo-1-17110846772691715316409.jpg"
-            class="w-100">
+         <picture>
+            <source
+               srcset="https://www.chacos.com/on/demandware.static/-/Sites-chacos_us-Library/default/dw0cc6ee87/content/seasonal-content/homepage/2024/02/18/home-favorites-20240218.gif"
+               media="(max-width: 640px)">
+            <img
+               src="https://www.chacos.com/on/demandware.static/-/Sites-chacos_us-Library/default/dw0cc6ee87/content/seasonal-content/homepage/2024/02/18/home-favorites-20240218.gif"
+               class="w-100">
+         </picture>
       </div>
       <div class="box-right-favo">
          <div class="title-chacoNation">#ChacoNation</div>

@@ -8,8 +8,11 @@ var swiper = new Swiper(".categorySwiper", {
   },
   spaceBetween: 20,
   breakpoints: {
-    768: {
+    992: {
       slidesPerView: 4,
+    },
+    768: {
+      slidesPerView: 3,
     },
     300: {
       slidesPerView: 2,

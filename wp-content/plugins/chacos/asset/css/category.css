@@ -56,6 +56,9 @@
   font-size: 13px;
   font-weight: 400;
 }
+.link-color:hover {
+  color: #1d4b58;
+}
 .title-sp {
   color: #1d4b58;
   font-weight: 700;
