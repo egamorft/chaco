@@ -55,6 +55,17 @@ function add_my_custom_page_shop()
 
     $add_detail_product = wp_insert_post($my_detail_product);
     update_option('detail-product', $add_detail_product);
+
+    $my_product_features = array(
+        'post_title'    => wp_strip_all_tags('Product-features'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'Product-features',
+    );
+
+    $add_product_features = wp_insert_post($my_product_features);
+    update_option('product-features', $add_product_features);
 }
 
 register_activation_hook(__FILE__, 'add_my_custom_page_shop');
@@ -87,11 +98,17 @@ function fw_reserve_page_template_shop( $page_template )
         $page_template = dirname( __FILE__ ) . '/view/detail-product.php';
     }
 
+    $page_product_features = get_option('product-features');
+    if (  is_page( $page_product_features ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/product-features.php';
+    }
+
     return $page_template;
 }
 
 // xoa active
-function deactivate_plugin_pythaverse_shop()
+function deactivate_plugin_chacos_shop()
 {
     $page_home = get_option('home-shop');
     wp_delete_post($page_home);
@@ -101,5 +118,7 @@ function deactivate_plugin_pythaverse_shop()
     wp_delete_post($page_detail_product);
     $page_return = get_option('return');
     wp_delete_post($page_return);
+    $page_product_features = get_option('product-features');
+    wp_delete_post($page_product_features);
 }
-register_deactivation_hook(__FILE__, 'deactivate_plugin_pythaverse_shop');
+register_deactivation_hook(__FILE__, 'deactivate_plugin_chacos_shop');

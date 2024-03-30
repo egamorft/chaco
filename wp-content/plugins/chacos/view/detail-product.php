@@ -322,16 +322,91 @@
                         <div class="item-parameter-review">
                            <p class="title-item-parameter">Review this Product</p>
                            <div class="box-star-product">
-                              <div class="item-star-sp"><img src="<?= WIDGET_URL_CHACOS ?>/asset/img/star-regular.svg"
-                                    alt=""></div>
-                              <div class="item-star-sp"><img src="<?= WIDGET_URL_CHACOS ?>/asset/img/star-regular.svg"
-                                    alt=""></div>
-                              <div class="item-star-sp"><img src="<?= WIDGET_URL_CHACOS ?>/asset/img/star-regular.svg"
-                                    alt=""></div>
-                              <div class="item-star-sp"><img src="<?= WIDGET_URL_CHACOS ?>/asset/img/star-regular.svg"
-                                    alt=""></div>
-                              <div class="item-star-sp"><img src="<?= WIDGET_URL_CHACOS ?>/asset/img/star-regular.svg"
-                                    alt=""></div>
+                              <div class="item-star-sp"><svg aria-hidden="true" width="15px" height="15px" fill="none"
+                                    viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                       <g transform="translate(-588.000000, -409.000000)" fill="#FFFFFF"
+                                          fill-rule="nonzero" stroke="#004C59" stroke-width="1.5">
+                                          <g transform="translate(337.000000, 399.000000)">
+                                             <g transform="translate(241.000000, 0.000000)">
+                                                <g transform="translate(10.192308, 10.192308)">
+                                                   <path
+                                                      d="M16.3076923,1.76513255 L20.8381599,11.4172719 L31.0592597,12.978917 L23.6603835,20.5621906 L25.3975353,31.2117909 L16.3076923,26.1870493 L7.21784935,31.2117909 L8.95500108,20.5621906 L1.55612493,12.978917 L11.7772247,11.4172719 L16.3076923,1.76513255 Z">
+                                                   </path>
+                                                </g>
+                                             </g>
+                                          </g>
+                                       </g>
+                                    </g>
+                                 </svg></div>
+                              <div class="item-star-sp"><svg aria-hidden="true" width="15px" height="15px" fill="none"
+                                    viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                       <g transform="translate(-588.000000, -409.000000)" fill="#FFFFFF"
+                                          fill-rule="nonzero" stroke="#004C59" stroke-width="1.5">
+                                          <g transform="translate(337.000000, 399.000000)">
+                                             <g transform="translate(241.000000, 0.000000)">
+                                                <g transform="translate(10.192308, 10.192308)">
+                                                   <path
+                                                      d="M16.3076923,1.76513255 L20.8381599,11.4172719 L31.0592597,12.978917 L23.6603835,20.5621906 L25.3975353,31.2117909 L16.3076923,26.1870493 L7.21784935,31.2117909 L8.95500108,20.5621906 L1.55612493,12.978917 L11.7772247,11.4172719 L16.3076923,1.76513255 Z">
+                                                   </path>
+                                                </g>
+                                             </g>
+                                          </g>
+                                       </g>
+                                    </g>
+                                 </svg></div>
+                              <div class="item-star-sp"><svg aria-hidden="true" width="15px" height="15px" fill="none"
+                                    viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                       <g transform="translate(-588.000000, -409.000000)" fill="#FFFFFF"
+                                          fill-rule="nonzero" stroke="#004C59" stroke-width="1.5">
+                                          <g transform="translate(337.000000, 399.000000)">
+                                             <g transform="translate(241.000000, 0.000000)">
+                                                <g transform="translate(10.192308, 10.192308)">
+                                                   <path
+                                                      d="M16.3076923,1.76513255 L20.8381599,11.4172719 L31.0592597,12.978917 L23.6603835,20.5621906 L25.3975353,31.2117909 L16.3076923,26.1870493 L7.21784935,31.2117909 L8.95500108,20.5621906 L1.55612493,12.978917 L11.7772247,11.4172719 L16.3076923,1.76513255 Z">
+                                                   </path>
+                                                </g>
+                                             </g>
+                                          </g>
+                                       </g>
+                                    </g>
+                                 </svg></div>
+                              <div class="item-star-sp"><svg aria-hidden="true" width="15px" height="15px" fill="none"
+                                    viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                       <g transform="translate(-588.000000, -409.000000)" fill="#FFFFFF"
+                                          fill-rule="nonzero" stroke="#004C59" stroke-width="1.5">
+                                          <g transform="translate(337.000000, 399.000000)">
+                                             <g transform="translate(241.000000, 0.000000)">
+                                                <g transform="translate(10.192308, 10.192308)">
+                                                   <path
+                                                      d="M16.3076923,1.76513255 L20.8381599,11.4172719 L31.0592597,12.978917 L23.6603835,20.5621906 L25.3975353,31.2117909 L16.3076923,26.1870493 L7.21784935,31.2117909 L8.95500108,20.5621906 L1.55612493,12.978917 L11.7772247,11.4172719 L16.3076923,1.76513255 Z">
+                                                   </path>
+                                                </g>
+                                             </g>
+                                          </g>
+                                       </g>
+                                    </g>
+                                 </svg></div>
+                              <div class="item-star-sp"><svg aria-hidden="true" width="15px" height="15px" fill="none"
+                                    viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                       <g transform="translate(-588.000000, -409.000000)" fill="#FFFFFF"
+                                          fill-rule="nonzero" stroke="#004C59" stroke-width="1.5">
+                                          <g transform="translate(337.000000, 399.000000)">
+                                             <g transform="translate(241.000000, 0.000000)">
+                                                <g transform="translate(10.192308, 10.192308)">
+                                                   <path
+                                                      d="M16.3076923,1.76513255 L20.8381599,11.4172719 L31.0592597,12.978917 L23.6603835,20.5621906 L25.3975353,31.2117909 L16.3076923,26.1870493 L7.21784935,31.2117909 L8.95500108,20.5621906 L1.55612493,12.978917 L11.7772247,11.4172719 L16.3076923,1.76513255 Z">
+                                                   </path>
+                                                </g>
+                                             </g>
+                                          </g>
+                                       </g>
+                                    </g>
+                                 </svg></div>
                            </div>
                            <p class="content-item-parameter">Adding a review will require a valid email for verification
                            </p>

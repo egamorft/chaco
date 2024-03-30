@@ -316,7 +316,8 @@
    </div>
 
    <div class="box-fun-adventurous">
-      <figure class="w-100">
+      <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/line-top.png" class="line-video-top">
+      <figure class="w-100 m-0">
          <video data-src-sm="https://chacos-for-life.s3.amazonaws.com/customizing-m.mp4"
             data-poster-sm="https://www.chacos.com/on/demandware.static/-/Sites-chacos_us-Library/default/dwa163a259/content/seasonal-content/landing-pages/chacos-for-life/images/customizing-m.png"
             data-src-lg="https://chacos-for-life.s3.amazonaws.com/customizing-d.mp4"
@@ -333,6 +334,7 @@
             poster="https://www.chacos.com/on/demandware.static/-/Sites-chacos_us-Library/default/dwa163a259/content/seasonal-content/landing-pages/chacos-for-life/images/customizing-m.png"
             src="https://chacos-for-life.s3.amazonaws.com/customizing-m.mp4"></video>
       </figure>
+      <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/line-bottom.png" class="line-video-bottom">
       <div class="box-content-fun">
          <div class="title-content-fun">FUN ADVENTUROUS, <span style="color: #E48665;">UNIQUELY YOU.</span></div>
          <div class="d-flex flex-column">
@@ -479,11 +481,7 @@
          your next adventure with sandals, flip flops, and shoes built to perform in style.</p>
    </div>
 
-   <!-- </div> -->
-
    <?php include plugin_dir_path( __FILE__ ) . 'layout/footer.php'?>
-
-   <!-- </div> -->
 
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
