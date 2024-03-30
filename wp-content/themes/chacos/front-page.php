@@ -2,71 +2,96 @@
 get_header();
 ?>
 
-<div class="box-banner swiper bannerSwiper">
-    <div class="swiper-wrapper">
+<!-- Slider -->
+<?php
+if (have_rows('sliders')) :
+?>
+    <div class="box-banner swiper bannerSwiper">
+        <div class="swiper-wrapper">
+            <?php
+            while (have_rows('sliders')) : the_row();
+                $image = get_sub_field('image');
+                $tag = get_sub_field('tag');
+                $title = get_sub_field('title');
+                $description = get_sub_field('description');
+                $button_title = get_sub_field('button_title');
+                $button_link = get_sub_field('button_link');
+            ?>
+                <div class="swiper-slide box-item-banner">
+                    <img src="<?= $image ?? '#' ?>" class="w-100 img-banner-home">
+                    <img src="<?= $image ?? '#' ?>" class="w-100 img-banner-home-mobile">
+                    <div class="box-contnt-banner">
+                        <?php
+                        if ($tag) {
+                            echo '<div class="title-banner-one">' . htmlspecialchars($tag) . '</div>';
+                        }
+                        ?>
 
-        <?php if (have_rows('sliders')) : ?>
-            <ul class="slides">
-                <?php while (have_rows('sliders')) : the_row();
+                        <?php
+                        if ($title) {
+                            $words = explode(' ', $title);
+                            $wordCount = count($words);
+
+                            // 1 word last
+                            $firstTitle = ($wordCount > 1) ? implode(' ', array_slice($words, 0, -1)) : '';
+                            $lastTitle = ($wordCount > 0) ? $words[$wordCount - 1] : '';
+                        }
+                        ?>
+                        <div class="title-banner-two"><span style="color: #1D4B58;"><?= $firstTitle ?? "" ?></span> <span style="color: #B85B53;"><?= $lastTitle ?? "" ?></span></div>
+
+                        <?php
+                        if ($description) {
+                            echo '<div class="title-banner-three">' . htmlspecialchars($description) . '</div>';
+                        }
+                        ?>
+
+                        <?php
+                        if ($button_title) {
+                            echo '<a href="<?= $button_link ?? "#" ?>" class="btn-link-banner">' . htmlspecialchars($button_title) . '</a>';
+                        }
+                        ?>
+                    </div>
+                </div>
+            <?php
+            endwhile;
+            ?>
+        </div>
+        <div class="swiper-pagination swiper-pagination-banner"></div>
+    </div>
+<?php
+endif;
+?>
+
+<!-- Slider -->
+<?php
+if (have_rows('shop_by_style')) :
+?>
+    <div class="box-shop-style">
+        <div class="title-shop-style">Shop <span style="color: #E48665;">by style</span></div>
+        <div class="swiper productSwiper">
+            <div class="swiper-wrapper">
+                <?php
+                while (have_rows('shop_by_style')) : the_row();
                     $image = get_sub_field('image');
                     $title = get_sub_field('title');
                 ?>
-                    <div class="swiper-slide box-item-banner">
-                        <img src="<?= $image ?>" class="w-100 img-banner-home">
-                        <img src="<?= $image ?>" class="w-100 img-banner-home-mobile">
-                        <div class="box-contnt-banner">
-                            <div class="title-banner-one"><?= $title ?></div>
-                            <div class="title-banner-two"><span style="color: #1D4B58;">THE RETRO</span> <span style="color: #B85B53;">COLLECTION</span></div>
-                            <div class="title-banner-three">Rewind and refresh your style with the Retro Collection.</div>
-                            <a href="#" class="btn-link-banner">SHOP RETRO COLLECTION</a>
-                        </div>
+                    <div class="swiper-slide box-item-product">
+                        <img src="<?= $image ?? '#' ?>" class="img-product-style">
+                        <div class="title-product-bottom"><?= $title ?></div>
                     </div>
-                <?php endwhile; ?>
-            </ul>
-        <?php endif; ?>
+                <?php
+                endwhile;
+                ?>
 
-    </div>
-    <div class="swiper-pagination swiper-pagination-banner"></div>
-</div>
-
-<div class="box-shop-style">
-    <div class="title-shop-style">Shop <span style="color: #E48665;">by style</span></div>
-    <div class="swiper productSwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide box-item-product">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/z-sandals.png" class="img-product-style">
-                <div class="title-product-bottom">Leather</div>
-            </div>
-            <div class="swiper-slide box-item-product">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/z-sandals.png" class="img-product-style">
-                <div class="title-product-bottom">Leather</div>
-            </div>
-            <div class="swiper-slide box-item-product">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/z-sandals.png" class="img-product-style">
-                <div class="title-product-bottom">Leather</div>
-            </div>
-            <div class="swiper-slide box-item-product">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/z-sandals.png" class="img-product-style">
-                <div class="title-product-bottom">Leather</div>
-            </div>
-            <div class="swiper-slide box-item-product">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/z-sandals.png" class="img-product-style">
-                <div class="title-product-bottom">Leather</div>
-            </div>
-            <div class="swiper-slide box-item-product">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/z-sandals.png" class="img-product-style">
-                <div class="title-product-bottom">Leather</div>
-            </div>
-            <div class="swiper-slide box-item-product">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/z-sandals.png" class="img-product-style">
-                <div class="title-product-bottom">Leather</div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination swiper-pagination-product"></div>
             </div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination swiper-pagination-product"></div>
     </div>
-</div>
+<?php
+endif;
+?>
 
 <article class="ag-full-width home-common" id="home-cards">
     <div class="ag-site-width">
