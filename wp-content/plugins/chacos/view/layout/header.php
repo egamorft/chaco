@@ -91,6 +91,7 @@
             <div class="title-header-center">MEN</div>
             <div class="title-header-center">KIDS</div>
             <div class="title-header-center">GEAR</div>
+            <div class="title-header-center">SALE</div>
             <div class="title-header-center">INSIDE CHACO</div>
          </div>
          <div class="d-flex align-items-center justify-content-between">

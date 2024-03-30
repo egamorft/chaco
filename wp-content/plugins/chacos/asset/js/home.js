@@ -131,6 +131,9 @@ var swiper = new Swiper(".productSwiper", {
 });
 var swiper = new Swiper(".favoritesSwiper", {
   spaceBetween: 30,
+  autoplay: {
+    delay: 5000,
+  },
   breakpoints: {
     768: {
       slidesPerView: 2.7,

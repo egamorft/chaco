@@ -30,6 +30,33 @@ var swiper = new Swiper(".swiperLike", {
     prevEl: ".swiper-button-prev",
   },
 });
+
 $(document).ready(function () {
   $("#lightgallery").lightGallery();
+});
+
+const stars = document.querySelectorAll(".item-star-sp");
+
+stars.forEach((star, index) => {
+  star.addEventListener("click", () => {
+    for (let i = 0; i <= index; i++) {
+      stars[i].classList.add("star-active");
+    }
+
+    for (let i = index + 1; i < stars.length; i++) {
+      stars[i].classList.remove("star-active");
+    }
+  });
+
+  star.addEventListener("mouseenter", () => {
+    for (let i = 0; i <= index; i++) {
+      stars[i].classList.add("star-active");
+    }
+  });
+
+  star.addEventListener("mouseleave", () => {
+    stars.forEach((star) => {
+      star.classList.remove("star-active");
+    });
+  });
 });

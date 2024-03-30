@@ -45,8 +45,14 @@
                <div class="position-relative">
                   <span class="tag-hot">NEW ARRIVAL</span>
                   <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp2.jpg" class="w-100 img-big-slide-sp">
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/heart.svg" class="icon-heart" style="right: 5px;"
-                     onclick="toggleHeart(this)">
+                  <div class="box-wishlist">
+                     <div class="item-wishlist">
+                        Wishlist
+                     </div>
+                  </div>
+                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/heart.svg" class="icon-heart" onclick="toggleHeart(this)"
+                     onmouseover="toggleWishlist(this)" onmouseout="hideWishlist(this)">
+
                </div>
                <div>
                   <a class="link-color">20 colors</a>
@@ -300,8 +306,13 @@
                <div class="position-relative img-big-sp">
                   <span class="tag-hot">NEW ARRIVAL</span>
                   <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg" class="w-100 img-big-option">
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/heart.svg" class="icon-heart"
-                     onclick="toggleHeart(this)">
+                  <div class="box-wishlist">
+                     <div class="item-wishlist">
+                        Wishlist
+                     </div>
+                  </div>
+                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/heart.svg" class="icon-heart" onclick="toggleHeart(this)"
+                     onmouseover="toggleWishlist(this)" onmouseout="hideWishlist(this)">
                </div>
                <div>
                   <a class="link-color">20 colors</a>
@@ -560,6 +571,16 @@
       });
       item.classList.toggle('active-filter');
 
+   }
+
+   function toggleWishlist(element) {
+      var wishlist = element.parentElement.querySelector('.box-wishlist');
+      wishlist.style.display = "flex";
+   }
+
+   function hideWishlist(element) {
+      var wishlist = element.parentElement.querySelector('.box-wishlist');
+      wishlist.style.display = "none";
    }
    </script>
 </body>
