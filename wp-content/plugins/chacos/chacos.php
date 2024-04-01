@@ -66,6 +66,17 @@ function add_my_custom_page_shop()
 
     $add_product_features = wp_insert_post($my_product_features);
     update_option('product-features', $add_product_features);
+
+    $my_strap_adjuster = array(
+        'post_title'    => wp_strip_all_tags('Strap-adjuster'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'strap-adjuster',
+    );
+
+    $add_strap_adjuster = wp_insert_post($my_strap_adjuster);
+    update_option('strap-adjuster', $add_strap_adjuster);
 }
 
 register_activation_hook(__FILE__, 'add_my_custom_page_shop');
@@ -104,6 +115,12 @@ function fw_reserve_page_template_shop( $page_template )
         $page_template = dirname( __FILE__ ) . '/view/product-features.php';
     }
 
+    $page_strap_adjuster = get_option('strap-adjuster');
+    if (  is_page( $page_strap_adjuster ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/strap-adjuster.php';
+    }
+
     return $page_template;
 }
 
@@ -120,5 +137,7 @@ function deactivate_plugin_chacos_shop()
     wp_delete_post($page_return);
     $page_product_features = get_option('product-features');
     wp_delete_post($page_product_features);
+    $page_strap_adjuster = get_option('strap-adjuster');
+    wp_delete_post($page_strap_adjuster);
 }
 register_deactivation_hook(__FILE__, 'deactivate_plugin_chacos_shop');
