@@ -559,6 +559,9 @@ body {
   font-size: 13px;
   font-weight: 400;
 }
+.title-header-menu-page:hover {
+  color: #004c59;
+}
 .product-rate {
   display: flex;
   align-items: center;
