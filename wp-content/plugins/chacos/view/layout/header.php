@@ -159,6 +159,10 @@
       <button type="button" class="btn-close" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSale"
          aria-controls="offcanvasSale" aria-label="Close"></button>
       <div class="box-sale-style mt-0">
+         <div style="color: black;font-weight: bold;text-align: center;font-size: 18px;margin: 12px 0;">Today's Offers
+         </div>
+         <div style="color: black;text-align: center;font-size: 14px;margin-bottom: 14px;">Click offer codes below to
+            apply in checkout.</div>
          <div class="item-sale-style">
             <img
                src="https://www.chacos.com/on/demandware.static/-/Sites-chacos_us-Library/default/dwc07ae136/content/seasonal-content/promos/2021/09/extole_updates_promotab_03.jpg"
