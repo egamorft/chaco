@@ -21,9 +21,9 @@
 
    <div class="box-sgin-in">
       <div class="line-header-menu-page">
-         <a href="/" class="title-header-menu-page">Home</a>
+         <a href="<?php echo home_url('/home') ?>" class="title-header-menu-page">Home</a>
          <span style="margin: 0 5px;">/</span>
-         <a href="" class="title-header-menu-page">Login</a>
+         <a href="<?php echo home_url('/login') ?>" class="title-header-menu-page">Login</a>
       </div>
       <div class="box-content-login-register">
          <div class="item-login-register">
@@ -58,7 +58,7 @@
                <a href="" target="_blank" class="link-here">Click here</a> to read
                our privacy policy.
             </p>
-            <button class="btn-login">CREATE AN ACCOUNT NOW</button>
+            <a href="<?php echo home_url('/registration') ?>" class="btn-login">CREATE AN ACCOUNT NOW</a>
          </div>
       </div>
    </div>

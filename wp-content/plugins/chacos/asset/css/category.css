@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   padding: 8px;
-  padding-left: 65px;
+  padding-left: 65px !important;
   margin-top: 143px;
   border-top: 1px solid #bdbdbd;
   border-bottom: 1px solid #bdbdbd;
@@ -72,6 +72,10 @@
   -webkit-line-clamp: 2;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  text-decoration: none;
+}
+.title-sp:hover {
+  color: #1d4b58;
 }
 .title-price-sp {
   color: #000000;
@@ -458,7 +462,7 @@
 }
 @media (max-width: 992px) {
   .line-header-menu-page {
-    padding-left: 40px;
+    padding-left: 40px !important;
   }
   .box-slide-category {
     padding-left: 40px;
@@ -507,7 +511,7 @@
 @media (max-width: 767px) {
   .line-header-menu-page {
     margin-top: 52px;
-    padding-left: 15px;
+    padding-left: 15px !important;
   }
   .next-category,
   .prev-category {
