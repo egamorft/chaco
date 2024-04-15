@@ -55,6 +55,9 @@
   color: #1d4b58;
   font-size: 13px;
   font-weight: 400;
+  height: 27px;
+  display: flex;
+  align-items: end;
 }
 .link-color:hover {
   color: #1d4b58;
@@ -305,7 +308,7 @@
   right: 15px;
   width: 20px;
   cursor: pointer;
-  bottom: 20px;
+  bottom: 13px;
 }
 .ts-star {
   color: #787878;
@@ -364,6 +367,52 @@
   right: 10px;
   top: 10px;
 }
+.box-option-color-style {
+  display: none;
+  position: relative;
+  padding: 0 30px;
+}
+.swiperOptionColor {
+  width: 285px !important;
+}
+.img-option-color {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.btn-option-color-next {
+  right: 0;
+}
+.btn-option-color-prev {
+  left: 0;
+}
+.btn-option-color-next:after,
+.btn-option-color-prev:after {
+  font-size: 17px;
+  color: #303030;
+  font-weight: bold;
+}
+.box-wishlist {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 3px #00000029;
+  color: #666;
+  font-size: 14px;
+  padding: 8px 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  display: none;
+}
+@media (max-width: 1820px) {
+  .swiperOptionColor {
+    width: 210px !important;
+  }
+}
 @media (max-width: 1570px) {
   .box-sp,
   .line-load-more {
@@ -371,6 +420,14 @@
   }
   .box-filter {
     width: 20%;
+  }
+  .swiperOptionColor {
+    width: 205px !important;
+  }
+}
+@media (max-width: 1450px) {
+  .swiperOptionColor {
+    width: 185px !important;
   }
 }
 @media (max-width: 1040px) {
@@ -394,6 +451,9 @@
   }
   .box-sp {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .swiperOptionColor {
+    width: 136px !important;
   }
 }
 @media (max-width: 992px) {
@@ -436,6 +496,12 @@
   }
   .body-item-filter {
     padding: 10px;
+  }
+  .line-add-cart-slide {
+    top: 10px;
+  }
+  .box-wishlist {
+    padding: 8px 12px;
   }
 }
 @media (max-width: 767px) {
@@ -503,5 +569,12 @@
   }
   .accordion-button-filter {
     background-color: white;
+  }
+  .line-add-cart-slide {
+    left: 5px;
+    top: 10px;
+  }
+  .swiperOptionColor {
+    width: 125px !important;
   }
 }

@@ -27,4 +27,18 @@ document.addEventListener("DOMContentLoaded", function () {
     searchBoxFocus.style.display = "none";
     document.body.style.overflow = "";
   });
+
+  for (let i = 1; i <= 10; i++) {
+    const boxItemSmall = document.querySelector(`.box-item-small-${i}`);
+    const menuBig = document.querySelector(`.menu-big-${i}`);
+    if (boxItemSmall) {
+      boxItemSmall.addEventListener("mouseover", function () {
+        menuBig.classList.add("border-header-nav");
+      });
+
+      boxItemSmall.addEventListener("mouseout", function () {
+        menuBig.classList.remove("border-header-nav");
+      });
+    }
+  }
 });

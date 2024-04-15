@@ -217,7 +217,7 @@
 .box-contnt-banner {
   position: absolute;
   left: 65px;
-  top: 50%;
+  top: 42%;
   transform: translateY(-50%);
   width: 100%;
   max-width: 447px;
@@ -500,6 +500,16 @@
 .swiper-slide {
   transition: transform 0.4s ease-in-out;
 }
+.line-video-top {
+  width: 100%;
+  position: absolute;
+  top: 50px;
+}
+.line-video-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
 @media (min-width: 1921px) {
   .ag-full-width {
     font-size: 10px;
@@ -548,6 +558,9 @@
   }
   .img-product-style {
     max-height: 285px;
+  }
+  .title-banner-two {
+    font-size: 45px;
   }
 }
 @media (max-width: 1260px) {
@@ -967,12 +980,12 @@
     margin-top: 40px;
   }
   .box-content-fun {
-    top: 30px;
+    top: 55px;
     width: 65%;
     right: unset;
     left: 50%;
     transform: translateX(-50%);
-    height: 88%;
+    height: 82%;
     justify-content: space-between;
   }
   .title-content-fun {
@@ -1008,6 +1021,9 @@
   .title-banner-two,
   .title-banner-three {
     text-align: center;
+  }
+  .line-video-top {
+    top: 0;
   }
 }
 @media (max-width: 640px) {

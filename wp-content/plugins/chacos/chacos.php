@@ -55,6 +55,61 @@ function add_my_custom_page_shop()
 
     $add_detail_product = wp_insert_post($my_detail_product);
     update_option('detail-product', $add_detail_product);
+
+    $my_product_features = array(
+        'post_title'    => wp_strip_all_tags('Product-features'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'Product-features',
+    );
+
+    $add_product_features = wp_insert_post($my_product_features);
+    update_option('product-features', $add_product_features);
+
+    $my_strap_adjuster = array(
+        'post_title'    => wp_strip_all_tags('Strap-adjuster'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'strap-adjuster',
+    );
+
+    $add_strap_adjuster = wp_insert_post($my_strap_adjuster);
+    update_option('strap-adjuster', $add_strap_adjuster);
+
+    $my_login = array(
+        'post_title'    => wp_strip_all_tags('Login'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'login',
+    );
+
+    $add_login = wp_insert_post($my_login);
+    update_option('login', $add_login);
+
+    $my_account = array(
+        'post_title'    => wp_strip_all_tags('Account'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'account',
+    );
+
+    $add_account = wp_insert_post($my_account);
+    update_option('account', $add_account);
+
+    $my_order_status = array(
+        'post_title'    => wp_strip_all_tags('Order-status'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'order-status',
+    );
+
+    $add_order_status = wp_insert_post($my_order_status);
+    update_option('order-status', $add_order_status);
 }
 
 register_activation_hook(__FILE__, 'add_my_custom_page_shop');
@@ -87,11 +142,41 @@ function fw_reserve_page_template_shop( $page_template )
         $page_template = dirname( __FILE__ ) . '/view/detail-product.php';
     }
 
+    $page_product_features = get_option('product-features');
+    if (  is_page( $page_product_features ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/product-features.php';
+    }
+
+    $page_strap_adjuster = get_option('strap-adjuster');
+    if (  is_page( $page_strap_adjuster ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/strap-adjuster.php';
+    }
+
+    $page_login = get_option('login');
+    if (  is_page( $page_login ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/sgin-in.php';
+    }
+
+    $page_account = get_option('account');
+    if (  is_page( $page_account ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/account.php';
+    }
+
+    $page_order_status = get_option('order-status');
+    if (  is_page( $page_order_status ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/order-status.php';
+    }
+
     return $page_template;
 }
 
 // xoa active
-function deactivate_plugin_pythaverse_shop()
+function deactivate_plugin_chacos_shop()
 {
     $page_home = get_option('home-shop');
     wp_delete_post($page_home);
@@ -101,5 +186,15 @@ function deactivate_plugin_pythaverse_shop()
     wp_delete_post($page_detail_product);
     $page_return = get_option('return');
     wp_delete_post($page_return);
+    $page_product_features = get_option('product-features');
+    wp_delete_post($page_product_features);
+    $page_strap_adjuster = get_option('strap-adjuster');
+    wp_delete_post($page_strap_adjuster);
+    $page_login = get_option('login');
+    wp_delete_post($page_login);
+    $page_account = get_option('account');
+    wp_delete_post($page_account);
+    $page_order_status = get_option('order-status');
+    wp_delete_post($page_order_status);
 }
-register_deactivation_hook(__FILE__, 'deactivate_plugin_pythaverse_shop');
+register_deactivation_hook(__FILE__, 'deactivate_plugin_chacos_shop');

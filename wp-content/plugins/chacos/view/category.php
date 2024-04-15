@@ -34,108 +34,70 @@
       <p class="title-category-slide">FEATURED WOMEN'S Z/SANDALS</p>
       <div class="swiper categorySwiper">
          <div class="swiper-wrapper">
+            <?php 
+            for($i = 0;$i<7;$i++){
+            ?>
             <div class="swiper-slide slide-col-item-category">
-               <div class="line-add-cart-slide">
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/add-to-cart.png" alt="">
+               <div class="line-add-cart-slide ">
+                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/add-to-cart.png">
                   <span class="title-quick">Quick Add</span>
                </div>
                <div class="position-relative">
                   <span class="tag-hot">NEW ARRIVAL</span>
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/sp1.png" class="w-100">
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/heart.svg" class="icon-heart" style="right: 5px;"
-                     onclick="toggleHeart(this)">
+                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp2.jpg" class="w-100 img-big-slide-sp">
+                  <div class="box-wishlist">
+                     <div class="item-wishlist">
+                        Wishlist
+                     </div>
+                  </div>
+                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/heart.svg" class="icon-heart" onclick="toggleHeart(this)"
+                     onmouseover="toggleWishlist(this)" onmouseout="hideWishlist(this)">
+
                </div>
                <div>
                   <a class="link-color">20 colors</a>
+                  <div class="box-option-color-style p-0">
+                     <div class="swiper swiperOptionColor">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide slide-item-option-style"><img
+                                 src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg" class="img-option-color">
+                           </div>
+                           <div class="swiper-slide slide-item-option-style"><img
+                                 src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg" class="img-option-color">
+                           </div>
+                           <div class="swiper-slide slide-item-option-style"><img
+                                 src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg" class="img-option-color">
+                           </div>
+                           <div class="swiper-slide slide-item-option-style"><img
+                                 src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp2.jpg" class="img-option-color">
+                           </div>
+                           <div class="swiper-slide slide-item-option-style"><img
+                                 src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg" class="img-option-color">
+                           </div>
+                           <div class="swiper-slide slide-item-option-style"><img
+                                 src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg" class="img-option-color">
+                           </div>
+                           <div class="swiper-slide slide-item-option-style"><img
+                                 src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg" class="img-option-color">
+                           </div>
+                           <div class="swiper-slide slide-item-option-style"><img
+                                 src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg" class="img-option-color">
+                           </div>
+                           <div class="swiper-slide slide-item-option-style"><img
+                                 src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg" class="img-option-color">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-button-next btn-option-color-next"></div>
+                     <div class="swiper-button-prev btn-option-color-prev"></div>
+                  </div>
                   <p class="title-sp">WOMEN'S Z/1 ADJUSTABLE STRAP CLASSIC SANDAL</p>
                   <p class="title-price-sp">$105.00</p>
                </div>
             </div>
-            <div class="swiper-slide slide-col-item-category">
-               <div class="line-add-cart-slide">
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/add-to-cart.png" alt="">
-                  <span class="title-quick">Quick Add</span>
-               </div>
-               <div class="position-relative">
-                  <span class="tag-hot">NEW ARRIVAL</span>
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/sp1.png" class="w-100">
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/heart.svg" class="icon-heart" style="right: 5px;"
-                     onclick="toggleHeart(this)">
-               </div>
-               <div>
-                  <a class="link-color">20 colors</a>
-                  <p class="title-sp">WOMEN'S Z/1 ADJUSTABLE STRAP CLASSIC SANDAL</p>
-                  <p class="title-price-sp">$105.00</p>
-               </div>
-            </div>
-            <div class="swiper-slide slide-col-item-category">
-               <div class="line-add-cart-slide">
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/add-to-cart.png" alt="">
-                  <span class="title-quick">Quick Add</span>
-               </div>
-               <div class="position-relative">
-                  <span class="tag-hot">NEW ARRIVAL</span>
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/sp1.png" class="w-100">
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/heart.svg" class="icon-heart" style="right: 5px;"
-                     onclick="toggleHeart(this)">
-               </div>
-               <div>
-                  <a class="link-color">20 colors</a>
-                  <p class="title-sp">WOMEN'S Z/1 ADJUSTABLE STRAP CLASSIC SANDAL</p>
-                  <p class="title-price-sp">$105.00</p>
-               </div>
-            </div>
-            <div class="swiper-slide slide-col-item-category">
-               <div class="line-add-cart-slide">
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/add-to-cart.png" alt="">
-                  <span class="title-quick">Quick Add</span>
-               </div>
-               <div class="position-relative">
-                  <span class="tag-hot">NEW ARRIVAL</span>
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/sp1.png" class="w-100">
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/heart.svg" class="icon-heart" style="right: 5px;"
-                     onclick="toggleHeart(this)">
-               </div>
-               <div>
-                  <a class="link-color">20 colors</a>
-                  <p class="title-sp">WOMEN'S Z/1 ADJUSTABLE STRAP CLASSIC SANDAL</p>
-                  <p class="title-price-sp">$105.00</p>
-               </div>
-            </div>
-            <div class="swiper-slide slide-col-item-category">
-               <div class="line-add-cart-slide">
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/add-to-cart.png" alt="">
-                  <span class="title-quick">Quick Add</span>
-               </div>
-               <div class="position-relative">
-                  <span class="tag-hot">NEW ARRIVAL</span>
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/sp1.png" class="w-100">
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/heart.svg" class="icon-heart" style="right: 5px;"
-                     onclick="toggleHeart(this)">
-               </div>
-               <div>
-                  <a class="link-color">20 colors</a>
-                  <p class="title-sp">WOMEN'S Z/1 ADJUSTABLE STRAP CLASSIC SANDAL</p>
-                  <p class="title-price-sp">$105.00</p>
-               </div>
-            </div>
-            <div class="swiper-slide slide-col-item-category">
-               <div class="line-add-cart-slide">
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/add-to-cart.png" alt="">
-                  <span class="title-quick">Quick Add</span>
-               </div>
-               <div class="position-relative">
-                  <span class="tag-hot">NEW ARRIVAL</span>
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/sp1.png" class="w-100">
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/heart.svg" class="icon-heart" style="right: 5px;"
-                     onclick="toggleHeart(this)">
-               </div>
-               <div>
-                  <a class="link-color">20 colors</a>
-                  <p class="title-sp">WOMEN'S Z/1 ADJUSTABLE STRAP CLASSIC SANDAL</p>
-                  <p class="title-price-sp">$105.00</p>
-               </div>
-            </div>
+            <?php
+    }
+    ?>
          </div>
       </div>
       <div class="swiper-button-next next-category"></div>
@@ -341,14 +303,54 @@
                   <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/add-to-cart.png" alt="">
                   <span class="title-quick">Quick Add</span>
                </div>
-               <div class="position-relative">
+               <div class="position-relative img-big-sp">
                   <span class="tag-hot">NEW ARRIVAL</span>
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/sp1.png" class="w-100">
-                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/heart.svg" class="icon-heart"
-                     onclick="toggleHeart(this)">
+                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg" class="w-100 img-big-option">
+                  <div class="box-wishlist">
+                     <div class="item-wishlist">
+                        Wishlist
+                     </div>
+                  </div>
+                  <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/heart.svg" class="icon-heart" onclick="toggleHeart(this)"
+                     onmouseover="toggleWishlist(this)" onmouseout="hideWishlist(this)">
                </div>
                <div>
                   <a class="link-color">20 colors</a>
+                  <div class="box-option-color-style">
+                     <div class="swiper swiperOptionColor">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide"><img src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp2.jpg"
+                                 class="img-option-color">
+                           </div>
+                           <div class="swiper-slide"><img src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg"
+                                 class="img-option-color">
+                           </div>
+                           <div class="swiper-slide"><img src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg"
+                                 class="img-option-color">
+                           </div>
+                           <div class="swiper-slide"><img src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp2.jpg"
+                                 class="img-option-color">
+                           </div>
+                           <div class="swiper-slide"><img src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg"
+                                 class="img-option-color">
+                           </div>
+                           <div class="swiper-slide"><img src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg"
+                                 class="img-option-color">
+                           </div>
+                           <div class="swiper-slide"><img src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg"
+                                 class="img-option-color">
+                           </div>
+                           <div class="swiper-slide"><img src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg"
+                                 class="img-option-color">
+                           </div>
+                           <div class="swiper-slide"><img src="<?= WIDGET_URL_CHACOS ?>/asset/img/img-sp3.jpg"
+                                 class="img-option-color">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-button-next btn-option-color-next"></div>
+                     <div class="swiper-button-prev btn-option-color-prev"></div>
+                  </div>
                   <p class="title-sp">WOMEN'S Z/1 ADJUSTABLE STRAP CLASSIC SANDAL</p>
                   <p class="title-price-sp mb-1">$69.99 - $105.00</p>
                   <div class="d-flex mb-1">
@@ -569,6 +571,16 @@
       });
       item.classList.toggle('active-filter');
 
+   }
+
+   function toggleWishlist(element) {
+      var wishlist = element.parentElement.querySelector('.box-wishlist');
+      wishlist.style.display = "flex";
+   }
+
+   function hideWishlist(element) {
+      var wishlist = element.parentElement.querySelector('.box-wishlist');
+      wishlist.style.display = "none";
    }
    </script>
 </body>

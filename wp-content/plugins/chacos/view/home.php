@@ -12,61 +12,6 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
    <link rel="stylesheet" href="<?= WIDGET_URL_CHACOS ?>/asset/css/home.css">
    <link rel="stylesheet" href="<?= WIDGET_URL_CHACOS ?>/asset/css/style.css">
-   <style>
-      .row-1 {
-         animation: wave-row-1 3.4s ease-in-out infinite alternate;
-      }
-
-      .row-2 {
-         animation: wave-row-2 3.5s ease-in-out infinite alternate;
-      }
-
-      .row-3 {
-         animation: wave-row-3 3.6s ease-in-out infinite alternate;
-      }
-
-      @keyframes wave-row-1 {
-         0% {
-            transform: translateX(0);
-         }
-
-         50% {
-            transform: translateX(50px);
-         }
-
-         100% {
-            transform: translateX(0);
-         }
-      }
-
-      @keyframes wave-row-2 {
-         0% {
-            transform: translateX(0);
-         }
-
-         50% {
-            transform: translateX(55px);
-         }
-
-         100% {
-            transform: translateX(0);
-         }
-      }
-
-      @keyframes wave-row-3 {
-         0% {
-            transform: translateX(0);
-         }
-
-         50% {
-            transform: translateX(60px);
-         }
-
-         100% {
-            transform: translateX(0);
-         }
-      }
-   </style>
 </head>
 
 <body>
@@ -167,8 +112,8 @@
    <!-- Home cards -->
    <?php
    $homeCards = get_field('home_cards');
-   $leftCard = $homeCards['left_card'];
-   $rightCard = $homeCards['right_card'];
+   $leftCard = $homeCards['left_card'] ?? null;
+   $rightCard = $homeCards['right_card'] ?? null;
    ?>
 
    <article class="ag-full-width home-common" id="home-cards">
@@ -301,115 +246,126 @@
    <!-- Favorites -->
    <?php
    $favorites = get_field('favorites');
-   $hashTag = $favorites['hashtag'];
-   $title = $favorites['title'];
-   $products = $favorites['products'];
-   ?>
-   <div class="box-favorites">
-      <div class="box-left-favo-img">
-         <picture>
-            <source srcset="https://www.chacos.com/on/demandware.static/-/Sites-chacos_us-Library/default/dw0cc6ee87/content/seasonal-content/homepage/2024/02/18/home-favorites-20240218.gif" media="(max-width: 640px)">
-            <img src="https://www.chacos.com/on/demandware.static/-/Sites-chacos_us-Library/default/dw0cc6ee87/content/seasonal-content/homepage/2024/02/18/home-favorites-20240218.gif" class="w-100">
-         </picture>
-      </div>
-      <div class="box-right-favo">
-         <?php
-         if ($hashTag) {
-            echo '<div class="title-chacoNation">#' . $hashTag . '</div>';
-         }
-         ?>
-         <?php
-         if ($title) {
-            echo '<div class="title-favorites">' . $title . '</div>';
-         }
-         ?>
-         <?php
-         if ($products) {
-         ?>
-            <div class="swiper favoritesSwiper">
-               <div class="swiper-wrapper">
-                  <?php
-                  foreach ($products as $pro) {
-                  ?>
-                     <div class="swiper-slide">
-                        <img src="<?= $pro['image']['url'] ?>" alt="" class="w-100">
-                        <div class="name-product-favo"><?= $pro['title'] ?></div>
-                        <?php
-                        if ($pro['price']) {
-                           echo '<div class="price-product-favo">$' . $pro['price'] . '</div>';
-                        }
-                        ?>
-                     </div>
-                  <?php
-                  }
-                  ?>
-               </div>
-               <div class="swiper-button-prev"></div>
-               <div class="swiper-button-next"></div>
-            </div>
-         <?php
-         }
-         ?>
-      </div>
+   $image = $favorites['image'] ?? null;
+   $hashTag = $favorites['hashtag'] ?? null;
+   $title = $favorites['title'] ?? null;
+   $products = $favorites['products'] ?? null;
 
-   </div>
+   if ($favorites) {
+   ?>
+      <div class="box-favorites">
+         <div class="box-left-favo-img">
+            <picture>
+               <source srcset="<?= $image['url'] ?>" media="(max-width: 640px)">
+               <img src="<?= $image['url'] ?>" class="w-100">
+            </picture>
+         </div>
+         <div class="box-right-favo">
+            <?php
+            if ($hashTag) {
+               echo '<div class="title-chacoNation">#' . $hashTag . '</div>';
+            }
+            ?>
+            <?php
+            if ($title) {
+               echo '<div class="title-favorites">' . $title . '</div>';
+            }
+            ?>
+            <?php
+            if ($products) {
+            ?>
+               <div class="swiper favoritesSwiper">
+                  <div class="swiper-wrapper">
+                     <?php
+                     foreach ($products as $pro) {
+                     ?>
+                        <div class="swiper-slide">
+                           <img src="<?= $pro['image']['url'] ?>" alt="" class="w-100">
+                           <div class="name-product-favo"><?= $pro['title'] ?></div>
+                           <?php
+                           if ($pro['price']) {
+                              echo '<div class="price-product-favo">$' . $pro['price'] . '</div>';
+                           }
+                           ?>
+                        </div>
+                     <?php
+                     }
+                     ?>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+               </div>
+            <?php
+            }
+            ?>
+         </div>
+
+      </div>
+   <?php
+   }
+   ?>
    <!-- Favorites -->
 
    <!-- Adventurous -->
    <?php
    $adventurous = get_field('adventurous');
-   $poster = $adventurous['poster'];
-   $posterSM = $adventurous['poster_sm'];
-   $posterLG = $adventurous['poster_lg'];
-   $title = $adventurous['title'];
-   $button_1_title = $adventurous['button_1_title'];
-   $button_2_title = $adventurous['button_2_title'];
+   $poster = $adventurous['poster'] ?? null;
+   $posterSM = $adventurous['poster_sm'] ?? null;
+   $posterLG = $adventurous['poster_lg'] ?? null;
+   $title = $adventurous['title'] ?? null;
+   $button_1_title = $adventurous['button_1_title'] ?? null;
+   $button_2_title = $adventurous['button_2_title'] ?? null;
    $button_1_target = $adventurous['button_1_target'] ?? '#';
    $button_2_target = $adventurous['button_2_target'] ?? '#';
 
-   if ($title) {
-      $words = explode(' ', strtoupper($title)); // Split the title into an array of words
-      $wordCount = count($words); // Get the total number of words
+   $words = explode(' ', strtoupper($title)); // Split the title into an array of words
+   $wordCount = count($words); // Get the total number of words
 
-      $firstPart = ($wordCount > 2) ? implode(' ', array_slice($words, 0, -2)) : '';
-      $lastPart = ($wordCount > 1) ? implode(' ', array_slice($words, -2)) : '';
-   }
+   $firstPart = ($wordCount > 2) ? implode(' ', array_slice($words, 0, -2)) : '';
+   $lastPart = ($wordCount > 1) ? implode(' ', array_slice($words, -2)) : '';
+
+   if ($adventurous) {
    ?>
-   <div class="box-fun-adventurous">
-      <figure class="w-100">
-         <video data-src-sm="https://chacos-for-life.s3.amazonaws.com/customizing-m.mp4" data-poster-sm="<?= $posterSM['url'] ?>" data-src-lg="https://chacos-for-life.s3.amazonaws.com/customizing-d.mp4" data-poster-lg="<?= $posterLG['url'] ?>" autoplay="" playsinline="" muted="" loop="" poster="<?= $poster['url'] ?>" src="https://chacos-for-life.s3.amazonaws.com/customizing-d.mp4" class="w-100 video-desktop">
-         </video>
+      <div class="box-fun-adventurous">
+         <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/line-top.png" class="line-video-top">
+         <figure class="w-100 m-0">
+            <video data-src-sm="https://chacos-for-life.s3.amazonaws.com/customizing-m.mp4" data-poster-sm="<?= $posterSM['url'] ?>" data-src-lg="https://chacos-for-life.s3.amazonaws.com/customizing-d.mp4" data-poster-lg="<?= $posterLG['url'] ?>" autoplay="" playsinline="" muted="" loop="" poster="<?= $poster['url'] ?>" src="https://chacos-for-life.s3.amazonaws.com/customizing-d.mp4" class="w-100 video-desktop">
+            </video>
 
-         <video data-responsive="" data-src-sm="https://chacos-for-life.s3.amazonaws.com/customizing-m.mp4" data-poster-sm="<?= $posterSM['url'] ?>" data-src-lg="https://chacos-for-life.s3.amazonaws.com/customizing-d.mp4" data-poster-lg="<?= $posterLG['url'] ?>" autoplay="" playsinline="" muted="" loop="" class="customizing-video w-100 video-mobile" poster="<?= $poster['url'] ?>" src="https://chacos-for-life.s3.amazonaws.com/customizing-m.mp4">
-         </video>
+            <video data-responsive="" data-src-sm="https://chacos-for-life.s3.amazonaws.com/customizing-m.mp4" data-poster-sm="<?= $posterSM['url'] ?>" data-src-lg="https://chacos-for-life.s3.amazonaws.com/customizing-d.mp4" data-poster-lg="<?= $posterLG['url'] ?>" autoplay="" playsinline="" muted="" loop="" class="customizing-video w-100 video-mobile" poster="<?= $poster['url'] ?>" src="https://chacos-for-life.s3.amazonaws.com/customizing-m.mp4">
+            </video>
 
-      </figure>
-      <div class="box-content-fun">
-         <div class="title-content-fun"><?= $firstPart ?> <span style="color: #E48665;"><?= $lastPart ?></span></div>
-         <div class="d-flex flex-column">
-            <?php
-            if ($button_1_title) {
-               echo '<a href="' . $button_1_target . '" class="btn-link-fun">' . $button_1_title . '</a>';
-            }
-            ?>
-            <?php
-            if ($button_2_title) {
-               echo '<a href="' . $button_2_target . '" class="btn-link-fun">' . $button_2_title . '</a>';
-            }
-            ?>
+         </figure>
+         <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/line-bottom.png" class="line-video-bottom">
+         <div class="box-content-fun">
+            <div class="title-content-fun"><?= $firstPart ?> <span style="color: #E48665;"><?= $lastPart ?></span></div>
+            <div class="d-flex flex-column">
+               <?php
+               if ($button_1_title) {
+                  echo '<a href="' . $button_1_target . '" class="btn-link-fun">' . $button_1_title . '</a>';
+               }
+               ?>
+               <?php
+               if ($button_2_title) {
+                  echo '<a href="' . $button_2_target . '" class="btn-link-fun">' . $button_2_title . '</a>';
+               }
+               ?>
+            </div>
          </div>
       </div>
-   </div>
+   <?php
+   }
+   ?>
    <!-- Adventurous -->
 
    <!-- Instagram social -->
    <?php
    $social = get_field('social');
-   $title = $social['title'];
-   $description = $social['description'];
-   $first_gallery = $social['first_gallery'];
-   $second_gallery = $social['second_gallery'];
-   $last_gallery = $social['last_gallery'];
+   $title = $social['title'] ?? null;
+   $description = $social['description'] ?? null;
+   $first_gallery = $social['first_gallery'] ?? null;
+   $second_gallery = $social['second_gallery'] ?? null;
+   $last_gallery = $social['last_gallery'] ?? null;
 
    if ($title) {
       $words = explode(' ', $title); // Split the title into an array of words
@@ -418,77 +374,81 @@
       $firstPart = ($wordCount > 1) ? implode(' ', array_slice($words, 0, -1)) : '';
       $lastPart = ($wordCount > 0) ? $words[$wordCount - 1] : '';
    }
+   if ($social) {
    ?>
-   <div class="box-around">
-      <?php
-      if ($title || $description) {
-      ?>
-         <div class="box-header-around">
-            <?php
-            if ($title) {
-               echo '<p class="title-big-around">' . $firstPart . ' <span style="color: #E45C37;">' . $lastPart . '</span></p>';
-            }
-            ?>
-
-            <?php
-            if ($description) {
-               echo '<p class="title-small-around">' . $description . '</p>';
-            }
-            ?>
-         </div>
-      <?php
-      }
-      ?>
-
-      <?php
-      if ($first_gallery) {
-      ?>
-         <div class="swiper photo-library">
-            <div class="swiper-wrapper">
+      <div class="box-around">
+         <?php
+         if ($title || $description) {
+         ?>
+            <div class="box-header-around">
                <?php
-               foreach ($first_gallery as $gal) {
-                  echo '<div class="swiper-slide row-1"><img src="' . $gal['image']['url'] . '" class="w-100"></div>';
+               if ($title) {
+                  echo '<p class="title-big-around">' . $firstPart . ' <span style="color: #E45C37;">' . $lastPart . '</span></p>';
+               }
+               ?>
+
+               <?php
+               if ($description) {
+                  echo '<p class="title-small-around">' . $description . '</p>';
                }
                ?>
             </div>
-         </div>
-      <?php
-      }
-      ?>
+         <?php
+         }
+         ?>
 
-      <?php
-      if ($second_gallery) {
-      ?>
-         <div class="swiper photo-library">
-            <div class="swiper-wrapper">
-               <?php
-               foreach ($second_gallery as $gal) {
-                  echo '<div class="swiper-slide row-2"><img src="' . $gal['image']['url'] . '" class="w-100"></div>';
-               }
-               ?>
+         <?php
+         if ($first_gallery) {
+         ?>
+            <div class="swiper photo-library1 mb-2">
+               <div class="swiper-wrapper">
+                  <?php
+                  foreach ($first_gallery as $gal) {
+                     echo '<div class="swiper-slide"><img src="' . $gal['image']['url'] . '" class="w-100"></div>';
+                  }
+                  ?>
+               </div>
             </div>
-         </div>
-      <?php
-      }
-      ?>
+         <?php
+         }
+         ?>
 
-      <?php
-      if ($last_gallery) {
-      ?>
-         <div class="swiper photo-library">
-            <div class="swiper-wrapper">
-               <?php
-               foreach ($last_gallery as $gal) {
-                  echo '<div class="swiper-slide row-3"><img src="' . $gal['image']['url'] . '" class="w-100"></div>';
-               }
-               ?>
+         <?php
+         if ($second_gallery) {
+         ?>
+            <div class="swiper photo-library2 mb-2">
+               <div class="swiper-wrapper">
+                  <?php
+                  foreach ($second_gallery as $gal) {
+                     echo '<div class="swiper-slide"><img src="' . $gal['image']['url'] . '" class="w-100"></div>';
+                  }
+                  ?>
+               </div>
             </div>
-         </div>
-      <?php
-      }
-      ?>
+         <?php
+         }
+         ?>
 
-   </div>
+         <?php
+         if ($last_gallery) {
+         ?>
+            <div class="swiper photo-library3 mb-2">
+               <div class="swiper-wrapper">
+                  <?php
+                  foreach ($last_gallery as $gal) {
+                     echo '<div class="swiper-slide"><img src="' . $gal['image']['url'] . '" class="w-100"></div>';
+                  }
+                  ?>
+               </div>
+            </div>
+         <?php
+         }
+         ?>
+
+      </div>
+   <?php
+   }
+   ?>
    <!-- Instagram social -->
 
    <!-- Describe -->
@@ -507,8 +467,6 @@
 
 
    <?php include plugin_dir_path(__FILE__) . 'layout/footer.php' ?>
-
-   <!-- </div> -->
 
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
