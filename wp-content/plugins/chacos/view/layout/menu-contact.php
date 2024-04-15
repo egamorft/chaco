@@ -4,7 +4,7 @@
       <div class="line-content-menu">
          <a href="" class="menu-contact-item">Shipping </br> Information</a>
          <a href="" class="menu-contact-item active-menu-contact">Returns & </br> Exchanges</a>
-         <a href="" class="menu-contact-item">Account</a>
+         <a href="<?php echo home_url('/account') ?>" class="menu-contact-item">Account</a>
          <a href="" class="menu-contact-item">Order Status</a>
          <a href="" class="menu-contact-item">FAQ</a>
       </div>

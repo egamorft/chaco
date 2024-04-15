@@ -20,8 +20,27 @@
                <li><a class="dropdown-item-help dropdown-item" href="#"><img
                         src="https://www.chacos.com/on/demandware.static/Sites-chacos_us-Site/-/default/dw5baa338f/images/Icon-truck-new.png"
                         class="mr-2"><span style="padding-left: 5px;">SHIPPING INFO</span></a></li>
+               <li>
+                  <a class="dropdown-item-help dropdown-item d-flex align-items-baseline"
+                     href="<?php echo home_url('/my-account') ?>">
+                     <svg id="Icon_user_member_account" data-name="Icon user member account"
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 20 20">
+                        <rect id="Rectangle" width="16" height="16" fill="#eee" opacity="0"></rect>
+                        <g id="Group_1540" data-name="Group 1540">
+                           <path id="Path_78" data-name="Path 78" d="M20,21V19a4,4,0,0,0-4-4H8a4,4,0,0,0-4,4v2"
+                              transform="translate(-2 -2.223)" fill="none" stroke="#004c59" stroke-linecap="round"
+                              stroke-linejoin="round" stroke-width="2"></path>
+                           <circle id="Ellipse" cx="4" cy="4" r="4" transform="translate(6 2)" fill="none"
+                              stroke="#004c59" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle>
+                        </g>
+                     </svg>
+                     <span style="padding-left: 5px;">ACCOUNT SIGN IN</span>
+                  </a>
+               </li>
             </ul>
-            <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/heart.png" class="icon-header">
+            <a href="<?php echo home_url('/wishlist') ?>">
+               <img src=" <?= WIDGET_URL_CHACOS ?>/asset/img/heart.png" class="icon-header">
+            </a>
             <div class="position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSale"
                aria-controls="offcanvasRight">
                <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/Icon.png" class="icon-header">
@@ -34,7 +53,8 @@
    <div class="header-center">
       <div class="box-big-header-center">
          <div class="d-flex align-items-center">
-            <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/logo.png" class="img-logo">
+            <a href="<?php echo home_url('/home') ?>"><img src="<?= WIDGET_URL_CHACOS ?>/asset/img/logo.png"
+                  class="img-logo"></a>
             <div class="title-header-center menu-big-1">NEW</div>
             <div class="box-item-menu-header box-item-small-1">
                <div class="item-menu-header-col">
@@ -159,7 +179,8 @@
       <button type="button" class="btn-close" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSale"
          aria-controls="offcanvasSale" aria-label="Close"></button>
       <div class="box-sale-style mt-0">
-         <div style="color: black;font-weight: bold;text-align: center;font-size: 18px;margin: 12px 0;">Today's Offers
+         <div style="color: black;font-weight: bold;text-align: center;font-size: 18px;margin: 12px 0;">Today's
+            Offers
          </div>
          <div style="color: black;text-align: center;font-size: 14px;margin-bottom: 14px;">Click offer codes below to
             apply in checkout.</div>

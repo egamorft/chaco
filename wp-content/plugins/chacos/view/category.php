@@ -91,7 +91,8 @@
                      <div class="swiper-button-next btn-option-color-next"></div>
                      <div class="swiper-button-prev btn-option-color-prev"></div>
                   </div>
-                  <p class="title-sp">WOMEN'S Z/1 ADJUSTABLE STRAP CLASSIC SANDAL</p>
+                  <a href="<?php echo home_url('/detail-product') ?>" class="title-sp">WOMEN'S Z/1 ADJUSTABLE STRAP
+                     CLASSIC SANDAL</a>
                   <p class="title-price-sp">$105.00</p>
                </div>
             </div>
@@ -351,7 +352,8 @@
                      <div class="swiper-button-next btn-option-color-next"></div>
                      <div class="swiper-button-prev btn-option-color-prev"></div>
                   </div>
-                  <p class="title-sp">WOMEN'S Z/1 ADJUSTABLE STRAP CLASSIC SANDAL</p>
+                  <a href="<?php echo home_url('/detail-product') ?>" class="title-sp">WOMEN'S Z/1 ADJUSTABLE STRAP
+                     CLASSIC SANDAL</a>
                   <p class="title-price-sp mb-1">$69.99 - $105.00</p>
                   <div class="d-flex mb-1">
                      <div class="product-rate">

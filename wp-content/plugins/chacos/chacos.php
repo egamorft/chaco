@@ -89,7 +89,18 @@ function add_my_custom_page_shop()
     $add_login = wp_insert_post($my_login);
     update_option('login', $add_login);
 
-    $my_account = array(
+    $my_registration = array(
+        'post_title'    => wp_strip_all_tags('Registration'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'registration',
+    );
+
+    $add_registration = wp_insert_post($my_registration);
+    update_option('registration', $add_registration);
+
+    $my_account_qa = array(
         'post_title'    => wp_strip_all_tags('Account'),
         'post_status'   => 'publish',
         'post_author'   => 1,
@@ -97,8 +108,8 @@ function add_my_custom_page_shop()
         'post_name' => 'account',
     );
 
-    $add_account = wp_insert_post($my_account);
-    update_option('account', $add_account);
+    $add_account_qa = wp_insert_post($my_account_qa);
+    update_option('account', $add_account_qa);
 
     $my_order_status = array(
         'post_title'    => wp_strip_all_tags('Order-status'),
@@ -110,6 +121,61 @@ function add_my_custom_page_shop()
 
     $add_order_status = wp_insert_post($my_order_status);
     update_option('order-status', $add_order_status);
+
+    $my_account = array(
+        'post_title'    => wp_strip_all_tags('My-account'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'my-account',
+    );
+
+    $add_my_account = wp_insert_post($my_account);
+    update_option('my-account', $add_my_account);
+
+    $edit_account = array(
+        'post_title'    => wp_strip_all_tags('Edit-account'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'edit-account',
+    );
+
+    $add_edit_account = wp_insert_post($edit_account);
+    update_option('edit-account', $add_edit_account);
+
+    $address = array(
+        'post_title'    => wp_strip_all_tags('Address'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'address',
+    );
+
+    $add_address = wp_insert_post($address);
+    update_option('address', $add_address);
+
+    $order_history = array(
+        'post_title'    => wp_strip_all_tags('Order-history'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'order-history',
+    );
+
+    $add_order_history = wp_insert_post($order_history);
+    update_option('order-history', $add_order_history);
+
+    $order_wishlist = array(
+        'post_title'    => wp_strip_all_tags('Wishlist'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'wishlist',
+    );
+
+    $add_wishlist = wp_insert_post($order_wishlist);
+    update_option('wishlist', $add_wishlist);
 }
 
 register_activation_hook(__FILE__, 'add_my_custom_page_shop');
@@ -157,7 +223,13 @@ function fw_reserve_page_template_shop( $page_template )
     $page_login = get_option('login');
     if (  is_page( $page_login ) ) {
 
-        $page_template = dirname( __FILE__ ) . '/view/sgin-in.php';
+        $page_template = dirname( __FILE__ ) . '/view/sign-in.php';
+    }
+
+    $page_registration = get_option('registration');
+    if (  is_page( $page_registration ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/registration.php';
     }
 
     $page_account = get_option('account');
@@ -170,6 +242,36 @@ function fw_reserve_page_template_shop( $page_template )
     if (  is_page( $page_order_status ) ) {
 
         $page_template = dirname( __FILE__ ) . '/view/order-status.php';
+    }
+
+    $page_my_account = get_option('my-account');
+    if (  is_page( $page_my_account ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/my-account.php';
+    }
+
+    $page_edit_account = get_option('edit-account');
+    if (  is_page( $page_edit_account ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/edit-account.php';
+    }
+
+    $page_address = get_option('address');
+    if (  is_page( $page_address ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/address.php';
+    }
+
+    $page_order_history = get_option('order-history');
+    if (  is_page( $page_order_history ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/order-history.php';
+    }
+
+    $page_wishlist = get_option('wishlist');
+    if (  is_page( $page_wishlist ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/wishlist.php';
     }
 
     return $page_template;
@@ -192,9 +294,21 @@ function deactivate_plugin_chacos_shop()
     wp_delete_post($page_strap_adjuster);
     $page_login = get_option('login');
     wp_delete_post($page_login);
+    $page_registration = get_option('registration');
+    wp_delete_post($page_registration);
     $page_account = get_option('account');
     wp_delete_post($page_account);
     $page_order_status = get_option('order-status');
     wp_delete_post($page_order_status);
+    $page_my_account = get_option('my-account');
+    wp_delete_post($page_my_account);
+    $page_edit_account = get_option('edit-account');
+    wp_delete_post($page_edit_account);
+    $page_address = get_option('address');
+    wp_delete_post($page_address);
+    $page_order_history = get_option('order-history');
+    wp_delete_post($page_order_history);
+    $wishlist = get_option('wishlist');
+    wp_delete_post($wishlist);
 }
 register_deactivation_hook(__FILE__, 'deactivate_plugin_chacos_shop');
