@@ -119,7 +119,8 @@
                <input type="text" class="input-search-header" id="searchInputs" placeholder="Search">
                <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/search-sm.png" class="btn-search-header">
             </div>
-            <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/shopping-cart.png" class="icon-cart">
+            <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/shopping-cart.png" class="icon-cart" data-bs-toggle="offcanvas"
+               data-bs-target="#offcanvasRightCart" aria-controls="offcanvasRightCart">
          </div>
       </div>
    </div>
@@ -170,7 +171,8 @@
       <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/flag.svg" class="icon-header">
       <div class="circle-mobile">1</div>
    </div>
-   <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/shopping-cart.png" class="icon-cart">
+   <img src="<?= WIDGET_URL_CHACOS ?>/asset/img/shopping-cart.png" class="icon-cart" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasRightCart" aria-controls="offcanvasRightCart">
 </div>
 
 <!-- model sale -->
@@ -344,6 +346,116 @@
       <div class="d-flex flex-column">
          <a href="" class="item-search-hot">bohdi</a>
          <a href="" class="item-search-hot">crocs</a>
+      </div>
+   </div>
+</div>
+
+<!-- Modal Cart -->
+<div class="offcanvas offcanvas-end offcanvas-end-cart" tabindex="-1" id="offcanvasRightCart"
+   aria-labelledby="offcanvasRightLabel">
+   <div class="offcanvas-header offcanvas-header-cart">
+      <h5 class="offcanvas-title offcanvas-title-cart" id="offcanvasRightLabel">ITEMS IN YOUR CART</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+   </div>
+   <div class="offcanvas-body body-cart">
+      <p class="title-top">CONGRATULATIONS!</p>
+      <p class="content-top">You Qualify for Free Standard Shipping!</p>
+      <div class="line-row-top"></div>
+      <div class="d-flex justify-content-between align-items-center pb-2"
+         style="border-bottom: 1px solid #dcdcdc; padding: 0 15px;">
+         <span>300.000 VND</span>
+         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 22 22">
+            <g id="Icon_Check_Status" data-name="Icon Check Status" transform="translate(1 1)">
+               <circle id="Ellipse_38" data-name="Ellipse 38" cx="10" cy="10" r="10" fill="#47c979" stroke="#47c979"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></circle>
+               <g id="Icon_check" data-name="Icon check" transform="translate(6 7)">
+                  <path id="check" d="M13,6,6.813,13,4,9.818" transform="translate(-4 -6)" fill="#47c979"
+                     stroke="#fffffe" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+               </g>
+            </g>
+         </svg>
+      </div>
+      <div class="box-product-cart">
+         <div class="item-product-cart">
+            <div class="mini-cart-name"><a href="#">Z/1
+                  Adjustable Strap Classic Sandal</a></div>
+            <div class="mini-cart-product-block">
+               <div class="mini-cart-image"><a
+                     href="https://www.chacos.com/on/demandware.store/Sites-chacos_us-Site/default/Product-Show?pid=195020165102">
+                     <img
+                        src="https://s7d4.scene7.com/is/image/WolverineWorldWide/CHAM-JCH108835-031523-S24-000?$dw-checkoutcartthm$&amp;fmt=jpeg"
+                        alt="">
+                  </a></div>
+               <div class="mini-cart-product-details">
+                  <div class="mini-cart-attributes">
+                     <div class="attribute"><span class="value " tabindex="0">Color: Deco Nutshell</span></div>
+                     <div class="attribute"><span class="value " tabindex="0" aria-label="Size">Size: 8 M</span></div>
+                  </div>
+                  <div class="item-sku-number">Item #195020165102 </div>
+                  <div class="mini-cart-action"><span class="item-edit-details-checkout"></span><a
+                        class="spc-edit-product" href="#">Edit</a><span class="action-divider">|</span><a href="#"
+                        class="mini-cart-product-remove" title="Remove" aria-label="Search-Show">Remove</a></div>
+                  <div class="mini-cart-messaging"></div>
+               </div>
+            </div>
+            <div class="mini-cart-pricing">
+               <div class="mini-cart-price-each">
+                  <div class="label" aria-label="Each" aria-labelledby="mini-cartprice-value-label-0">Each</div><span
+                     id="mini-cart-price-value-label-0" class="mini-cart-price bfx-price"
+                     data-price="$105.00">$105.00</span>
+               </div>
+               <div class="quantity-main-wrapper">
+                  <div class="label " aria-labelledby="mini-cartprice-value-label-0">Quantity
+                  </div>
+                  <div class="quantity-wrapper ">
+                     <span>
+                        <button type="button" class="quantity-minus btn-quantity-sp" data-field="quantity"><img
+                              src="<?= WIDGET_URL_CHACOS ?>/asset/img/cartqty-minus-new.png" alt="Remove Quantity"
+                              class="offers-icon"></button>
+                     </span>
+                     <input type="number" class="value input-quantity-sp" readonly id="mini-cart-quantity-value-0"
+                        value="1">
+                     <span>
+                        <button type="button" class="quantity-plus btn-quantity-sp" data-field="quantity"><img
+                              src="<?= WIDGET_URL_CHACOS ?>/asset/img/cartqty-plus-new.png" alt="Add Quantity"
+                              class="offers-icon"></button>
+                     </span>
+                  </div>
+               </div>
+               <div class="mini-cart-price-subtotal">
+                  <div class="label">Subtotal</div>
+                  <div class="mini-cart-price-each"><span class="mini-cart-price">$105.00</span></div>
+               </div>
+            </div>
+         </div>
+
+         <div class="accordion accordion-flush accordion-flush-discount" id="accordionFlushExample">
+            <div class="accordion-item">
+               <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed accordion-button-discount" type="button"
+                     data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                     aria-controls="flush-collapseOne">
+                     Add a Promotion or Discount
+                  </button>
+               </h2>
+               <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body accordion-body-discount">
+                     <input type="text" class="input-discount" placeholder="Promo Code">
+                     <button class="btn-up-code">Áp dụng</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="MiniCart__Padding24">
+            <h3 class="MiniCart__FooterTotal"><span class="MiniCart__FooterTotalTitle">Subtotal</span><span
+                  class="MiniCart__FooterTotalPrice">$105.00</span></h3>
+            <button class="mini-cart-link-checkout cta-primary">Checkout</button>
+            <div class="MiniCart__FooterViewCart">
+               <button class="mini-cart-link-checkout cta-primary">View
+                  Cart</button>
+            </div>
+         </div>
       </div>
    </div>
 </div>

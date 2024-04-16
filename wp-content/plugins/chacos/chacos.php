@@ -176,6 +176,17 @@ function add_my_custom_page_shop()
 
     $add_wishlist = wp_insert_post($order_wishlist);
     update_option('wishlist', $add_wishlist);
+
+    $cart = array(
+        'post_title'    => wp_strip_all_tags('Cart'),
+        'post_status'   => 'publish',
+        'post_author'   => 1,
+        'post_type'     => 'page',
+        'post_name' => 'cart',
+    );
+
+    $add_cart = wp_insert_post($cart);
+    update_option('cart', $add_cart);
 }
 
 register_activation_hook(__FILE__, 'add_my_custom_page_shop');
@@ -274,6 +285,12 @@ function fw_reserve_page_template_shop( $page_template )
         $page_template = dirname( __FILE__ ) . '/view/wishlist.php';
     }
 
+    $page_cart = get_option('cart');
+    if (  is_page( $page_cart ) ) {
+
+        $page_template = dirname( __FILE__ ) . '/view/cart.php';
+    }
+
     return $page_template;
 }
 
@@ -310,5 +327,7 @@ function deactivate_plugin_chacos_shop()
     wp_delete_post($page_order_history);
     $wishlist = get_option('wishlist');
     wp_delete_post($wishlist);
+    $cart = get_option('cart');
+    wp_delete_post($cart);
 }
 register_deactivation_hook(__FILE__, 'deactivate_plugin_chacos_shop');
